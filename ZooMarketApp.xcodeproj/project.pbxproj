@@ -7,23 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528AFF569071FFA97E02BA9C /* Pods_ZooMarketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */; };
+		A5012F4D2857EC2D0029F03F /* SignIn + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5012F4C2857EC2D0029F03F /* SignIn + FirebaseAuth.swift */; };
+		A5509ECB2857D0C200A1A8AB /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509ECA2857D0C200A1A8AB /* UserProfileView.swift */; };
+		A5509ECE2857D62700A1A8AB /* @objcMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509ECD2857D62700A1A8AB /* @objcMethods.swift */; };
+		A5509ED02857E16C00A1A8AB /* SignUp + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509ECF2857E16C00A1A8AB /* SignUp + FirebaseAuth.swift */; };
+		A5509ED22857EA0C00A1A8AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5509ED12857EA0C00A1A8AB /* GoogleService-Info.plist */; };
+		A575B62F2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B62E2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift */; };
+		A575B6322858000E00D6114C /* HomeBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B6312858000E00D6114C /* HomeBarController.swift */; };
+		A575B6342858008B00D6114C /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B6332858008B00D6114C /* MainPageController.swift */; };
+		A575B636285800FC00D6114C /* CatalogPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B635285800FC00D6114C /* CatalogPageController.swift */; };
+		A575B63B2858021100D6114C /* ProductCartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B63A2858021100D6114C /* ProductCartPage.swift */; };
+		A59D120228570B850069DC3E /* TextFieldSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120128570B850069DC3E /* TextFieldSetup.swift */; };
+		A59D120428570CBB0069DC3E /* @objCMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120328570CBB0069DC3E /* @objCMethods.swift */; };
+		A59D120628570D620069DC3E /* GestureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120528570D620069DC3E /* GestureSetup.swift */; };
+		A59D120828570E4D0069DC3E /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120728570E4C0069DC3E /* String + Extension.swift */; };
+		A59D120B28570FE10069DC3E /* AuthTextFieldSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120A28570FE10069DC3E /* AuthTextFieldSetup.swift */; };
+		A59D120D285710830069DC3E /* SignUp@objCMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120C285710830069DC3E /* SignUp@objCMethods.swift */; };
+		A59D120F285710F30069DC3E /* SignUpGestureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120E285710F30069DC3E /* SignUpGestureSetup.swift */; };
 		A5AA876F2850FAD2008D045B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA876E2850FAD2008D045B /* AppDelegate.swift */; };
 		A5AA87712850FAD2008D045B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87702850FAD2008D045B /* SceneDelegate.swift */; };
-		A5AA87732850FAD2008D045B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87722850FAD2008D045B /* ViewController.swift */; };
+		A5AA87732850FAD2008D045B /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87722850FAD2008D045B /* UserProfileController.swift */; };
 		A5AA87762850FAD2008D045B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AA87742850FAD2008D045B /* Main.storyboard */; };
 		A5AA87782850FAD3008D045B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5AA87772850FAD3008D045B /* Assets.xcassets */; };
 		A5AA877B2850FAD3008D045B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5AA87792850FAD3008D045B /* LaunchScreen.storyboard */; };
+		A5AA87842850FB73008D045B /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87832850FB73008D045B /* SignInController.swift */; };
+		A5AA87862850FBB2008D045B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87852850FBB2008D045B /* SignInView.swift */; };
+		A5AA87892854EB37008D045B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87882854EB37008D045B /* SignUpController.swift */; };
+		A5AA878B2854EBA2008D045B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA878A2854EBA2008D045B /* SignUpView.swift */; };
+		A5F094DF28585FD3000A5F70 /* TabBar + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094DE28585FD3000A5F70 /* TabBar + FirebaseAuth.swift */; };
+		A5F094E128586680000A5F70 /* TableView + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E028586680000A5F70 /* TableView + Delegate.swift */; };
+		A5F094E328587BCD000A5F70 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E228587BCD000A5F70 /* UserProfileCell.swift */; };
+		A5F094E628589109000A5F70 /* UserProfileSectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E528589109000A5F70 /* UserProfileSectionsModel.swift */; };
+		A5F094E82858A752000A5F70 /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E72858A752000A5F70 /* UserHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007F1A70FE9E44B2C7C84318 /* Pods-ZooMarketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooMarketApp.debug.xcconfig"; path = "Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1DE9FA7B19D6D883C7BF77C5 /* Pods-ZooMarketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooMarketApp.release.xcconfig"; path = "Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp.release.xcconfig"; sourceTree = "<group>"; };
+		894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooMarketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5012F4C2857EC2D0029F03F /* SignIn + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn + FirebaseAuth.swift"; sourceTree = "<group>"; };
+		A5509ECA2857D0C200A1A8AB /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		A5509ECD2857D62700A1A8AB /* @objcMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "@objcMethods.swift"; sourceTree = "<group>"; };
+		A5509ECF2857E16C00A1A8AB /* SignUp + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp + FirebaseAuth.swift"; sourceTree = "<group>"; };
+		A5509ED12857EA0C00A1A8AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A575B62E2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile + FirebaseAuth.swift"; sourceTree = "<group>"; };
+		A575B6312858000E00D6114C /* HomeBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBarController.swift; sourceTree = "<group>"; };
+		A575B6332858008B00D6114C /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
+		A575B635285800FC00D6114C /* CatalogPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPageController.swift; sourceTree = "<group>"; };
+		A575B63A2858021100D6114C /* ProductCartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartPage.swift; sourceTree = "<group>"; };
+		A59D120128570B850069DC3E /* TextFieldSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSetup.swift; sourceTree = "<group>"; };
+		A59D120328570CBB0069DC3E /* @objCMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "@objCMethods.swift"; sourceTree = "<group>"; };
+		A59D120528570D620069DC3E /* GestureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureSetup.swift; sourceTree = "<group>"; };
+		A59D120728570E4C0069DC3E /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
+		A59D120A28570FE10069DC3E /* AuthTextFieldSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextFieldSetup.swift; sourceTree = "<group>"; };
+		A59D120C285710830069DC3E /* SignUp@objCMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp@objCMethods.swift"; sourceTree = "<group>"; };
+		A59D120E285710F30069DC3E /* SignUpGestureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGestureSetup.swift; sourceTree = "<group>"; };
 		A5AA876B2850FAD2008D045B /* ZooMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AA876E2850FAD2008D045B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5AA87702850FAD2008D045B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A5AA87722850FAD2008D045B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A5AA87722850FAD2008D045B /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		A5AA87752850FAD2008D045B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5AA87772850FAD3008D045B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5AA877A2850FAD3008D045B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5AA877C2850FAD3008D045B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5AA87832850FB73008D045B /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		A5AA87852850FBB2008D045B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		A5AA87882854EB37008D045B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		A5AA878A2854EBA2008D045B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A5F094DE28585FD3000A5F70 /* TabBar + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBar + FirebaseAuth.swift"; sourceTree = "<group>"; };
+		A5F094E028586680000A5F70 /* TableView + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Delegate.swift"; sourceTree = "<group>"; };
+		A5F094E228587BCD000A5F70 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
+		A5F094E528589109000A5F70 /* UserProfileSectionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSectionsModel.swift; sourceTree = "<group>"; };
+		A5F094E72858A752000A5F70 /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +87,101 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528AFF569071FFA97E02BA9C /* Pods_ZooMarketApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5509EC92857D06800A1A8AB /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA87722850FAD2008D045B /* UserProfileController.swift */,
+				A5509ECA2857D0C200A1A8AB /* UserProfileView.swift */,
+				A5F094E228587BCD000A5F70 /* UserProfileCell.swift */,
+				A5509ECC2857D5FA00A1A8AB /* UserProfile + Extension */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		A5509ECC2857D5FA00A1A8AB /* UserProfile + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5F094E028586680000A5F70 /* TableView + Delegate.swift */,
+				A5F094E72858A752000A5F70 /* UserHeader.swift */,
+				A5509ECD2857D62700A1A8AB /* @objcMethods.swift */,
+				A575B62E2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift */,
+			);
+			path = "UserProfile + Extension";
+			sourceTree = "<group>";
+		};
+		A575B6302857FFA700D6114C /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A575B6312858000E00D6114C /* HomeBarController.swift */,
+				A5F094DE28585FD3000A5F70 /* TabBar + FirebaseAuth.swift */,
+				A575B6382858011900D6114C /* Catalog */,
+				A575B6372858010300D6114C /* MainPage */,
+				A575B6392858014300D6114C /* ProductCart */,
+				A5509EC92857D06800A1A8AB /* UserProfile */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		A575B6372858010300D6114C /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				A575B6332858008B00D6114C /* MainPageController.swift */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		A575B6382858011900D6114C /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				A575B635285800FC00D6114C /* CatalogPageController.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		A575B6392858014300D6114C /* ProductCart */ = {
+			isa = PBXGroup;
+			children = (
+				A575B63A2858021100D6114C /* ProductCartPage.swift */,
+			);
+			path = ProductCart;
+			sourceTree = "<group>";
+		};
+		A59D120028570B360069DC3E /* SingIn + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A59D120128570B850069DC3E /* TextFieldSetup.swift */,
+				A5012F4C2857EC2D0029F03F /* SignIn + FirebaseAuth.swift */,
+				A59D120328570CBB0069DC3E /* @objCMethods.swift */,
+				A59D120528570D620069DC3E /* GestureSetup.swift */,
+			);
+			path = "SingIn + Extension";
+			sourceTree = "<group>";
+		};
+		A59D120928570FB20069DC3E /* SignUp + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A59D120A28570FE10069DC3E /* AuthTextFieldSetup.swift */,
+				A5509ECF2857E16C00A1A8AB /* SignUp + FirebaseAuth.swift */,
+				A59D120C285710830069DC3E /* SignUp@objCMethods.swift */,
+				A59D120E285710F30069DC3E /* SignUpGestureSetup.swift */,
+			);
+			path = "SignUp + Extension";
+			sourceTree = "<group>";
+		};
 		A5AA87622850FAD2008D045B = {
 			isa = PBXGroup;
 			children = (
 				A5AA876D2850FAD2008D045B /* ZooMarketApp */,
 				A5AA876C2850FAD2008D045B /* Products */,
+				C31F3E0AF926B944FA90EB3B /* Pods */,
+				F938EE69A5C16117547FAEFF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +196,65 @@
 		A5AA876D2850FAD2008D045B /* ZooMarketApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5F094E4285890DB000A5F70 /* Model */,
+				A575B6302857FFA700D6114C /* HomeScreen */,
+				A5AA87822850FB32008D045B /* SignIN */,
+				A5AA87872854EB0C008D045B /* SignUp */,
 				A5AA876E2850FAD2008D045B /* AppDelegate.swift */,
+				A59D120728570E4C0069DC3E /* String + Extension.swift */,
 				A5AA87702850FAD2008D045B /* SceneDelegate.swift */,
-				A5AA87722850FAD2008D045B /* ViewController.swift */,
 				A5AA87742850FAD2008D045B /* Main.storyboard */,
 				A5AA87772850FAD3008D045B /* Assets.xcassets */,
 				A5AA87792850FAD3008D045B /* LaunchScreen.storyboard */,
 				A5AA877C2850FAD3008D045B /* Info.plist */,
+				A5509ED12857EA0C00A1A8AB /* GoogleService-Info.plist */,
 			);
 			path = ZooMarketApp;
+			sourceTree = "<group>";
+		};
+		A5AA87822850FB32008D045B /* SignIN */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA87832850FB73008D045B /* SignInController.swift */,
+				A5AA87852850FBB2008D045B /* SignInView.swift */,
+				A59D120028570B360069DC3E /* SingIn + Extension */,
+			);
+			path = SignIN;
+			sourceTree = "<group>";
+		};
+		A5AA87872854EB0C008D045B /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA87882854EB37008D045B /* SignUpController.swift */,
+				A5AA878A2854EBA2008D045B /* SignUpView.swift */,
+				A59D120928570FB20069DC3E /* SignUp + Extension */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A5F094E4285890DB000A5F70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5F094E528589109000A5F70 /* UserProfileSectionsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C31F3E0AF926B944FA90EB3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				007F1A70FE9E44B2C7C84318 /* Pods-ZooMarketApp.debug.xcconfig */,
+				1DE9FA7B19D6D883C7BF77C5 /* Pods-ZooMarketApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F938EE69A5C16117547FAEFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +264,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5AA877F2850FAD3008D045B /* Build configuration list for PBXNativeTarget "ZooMarketApp" */;
 			buildPhases = (
+				9C4617F0F80319CB434C1997 /* [CP] Check Pods Manifest.lock */,
 				A5AA87672850FAD2008D045B /* Sources */,
 				A5AA87682850FAD2008D045B /* Frameworks */,
 				A5AA87692850FAD2008D045B /* Resources */,
+				DF16798481AD28C6473A9B7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5509ED22857EA0C00A1A8AB /* GoogleService-Info.plist in Resources */,
 				A5AA877B2850FAD3008D045B /* LaunchScreen.storyboard in Resources */,
 				A5AA87782850FAD3008D045B /* Assets.xcassets in Resources */,
 				A5AA87762850FAD2008D045B /* Main.storyboard in Resources */,
@@ -133,14 +326,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C4617F0F80319CB434C1997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZooMarketApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF16798481AD28C6473A9B7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A5AA87672850FAD2008D045B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5AA87732850FAD2008D045B /* ViewController.swift in Sources */,
+				A5AA87892854EB37008D045B /* SignUpController.swift in Sources */,
+				A5F094E128586680000A5F70 /* TableView + Delegate.swift in Sources */,
+				A59D120228570B850069DC3E /* TextFieldSetup.swift in Sources */,
+				A5AA87732850FAD2008D045B /* UserProfileController.swift in Sources */,
+				A575B6342858008B00D6114C /* MainPageController.swift in Sources */,
+				A59D120D285710830069DC3E /* SignUp@objCMethods.swift in Sources */,
+				A5012F4D2857EC2D0029F03F /* SignIn + FirebaseAuth.swift in Sources */,
+				A59D120428570CBB0069DC3E /* @objCMethods.swift in Sources */,
+				A5509ED02857E16C00A1A8AB /* SignUp + FirebaseAuth.swift in Sources */,
+				A59D120628570D620069DC3E /* GestureSetup.swift in Sources */,
+				A5AA87842850FB73008D045B /* SignInController.swift in Sources */,
 				A5AA876F2850FAD2008D045B /* AppDelegate.swift in Sources */,
+				A575B62F2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift in Sources */,
+				A575B636285800FC00D6114C /* CatalogPageController.swift in Sources */,
+				A59D120828570E4D0069DC3E /* String + Extension.swift in Sources */,
+				A59D120F285710F30069DC3E /* SignUpGestureSetup.swift in Sources */,
+				A5509ECB2857D0C200A1A8AB /* UserProfileView.swift in Sources */,
+				A5F094DF28585FD3000A5F70 /* TabBar + FirebaseAuth.swift in Sources */,
+				A5AA87862850FBB2008D045B /* SignInView.swift in Sources */,
+				A59D120B28570FE10069DC3E /* AuthTextFieldSetup.swift in Sources */,
+				A5F094E328587BCD000A5F70 /* UserProfileCell.swift in Sources */,
+				A575B6322858000E00D6114C /* HomeBarController.swift in Sources */,
+				A5F094E628589109000A5F70 /* UserProfileSectionsModel.swift in Sources */,
+				A575B63B2858021100D6114C /* ProductCartPage.swift in Sources */,
+				A5AA878B2854EBA2008D045B /* SignUpView.swift in Sources */,
 				A5AA87712850FAD2008D045B /* SceneDelegate.swift in Sources */,
+				A5509ECE2857D62700A1A8AB /* @objcMethods.swift in Sources */,
+				A5F094E82858A752000A5F70 /* UserHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +542,7 @@
 		};
 		A5AA87802850FAD3008D045B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 007F1A70FE9E44B2C7C84318 /* Pods-ZooMarketApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +571,7 @@
 		};
 		A5AA87812850FAD3008D045B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE9FA7B19D6D883C7BF77C5 /* Pods-ZooMarketApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

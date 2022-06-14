@@ -1,0 +1,6 @@
+framework module Pods_ZooMarketApp {
+  umbrella header "Pods-ZooMarketApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
