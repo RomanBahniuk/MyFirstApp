@@ -34,22 +34,22 @@ extension PersonalDataController {
             
         }
         
-//        uploadUserPhoto(userID: "\(userID!)", userPhoto: personalDataView.userImage.image!) { (result) in
-//            switch result {
-//
-//            case .success(let url):
-//                let dataBase = Firestore.firestore()
-//                dataBase.collection("FirestoreUsers").document("\(userID!)").setData(["userImageURL": url.absoluteString], merge: true) { (error) in
-//                    if let error = error {
-//                        print("\(error.localizedDescription)")
-//                    }
-//                    print("added!")
-//                }
-//
-//            case .failure(let error):
-//                print("\(error.localizedDescription)")
-//            }
-//        }
+        uploadUserPhoto(userID: "\(userID!)", userPhoto: personalDataView.userImage.image!) { (result) in
+            switch result {
+
+            case .success(let url):
+                let dataBase = Firestore.firestore()
+                dataBase.collection("FirestoreUsers").document("\(userID!)").setData(["userImageURL": url.absoluteString], merge: true) { (error) in
+                    if let error = error {
+                        print("\(error.localizedDescription)")
+                    }
+                    print("added!")
+                }
+
+            case .failure(let error):
+                print("\(error.localizedDescription)")
+            }
+        }
         
         
         
