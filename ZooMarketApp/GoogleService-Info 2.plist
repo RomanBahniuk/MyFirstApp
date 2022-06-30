@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>593295384059-02etsjuuhqojkasmr32k1h7k60n3tu3u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.593295384059-02etsjuuhqojkasmr32k1h7k60n3tu3u</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAL_pnfaA6eFlNlbkNSKz8jWg2sAhEWaMA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>593295384059</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Raman-Bahniuk.ZooMarketApp</string>
+	<key>PROJECT_ID</key>
+	<string>zoomarketapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>zoomarketapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:593295384059:ios:9bff4c37c5c1b899bc3f5e</string>
+</dict>
+</plist>
