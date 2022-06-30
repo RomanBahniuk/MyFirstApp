@@ -20,5 +20,4 @@ extension UserProfileController {
         signOutAlert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
         present(signOutAlert, animated: true)
     }
-    
 }

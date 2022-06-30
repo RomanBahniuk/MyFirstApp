@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class HomeBarController: UITabBarController {
-    
-
     
     override func loadView() {
         super.loadView()
@@ -19,8 +19,8 @@ class HomeBarController: UITabBarController {
         super.viewDidLoad()
         setTabBarControllers()
         authenticateUser()
-        tabBar.tintColor = .systemIndigo
-        tabBar.unselectedItemTintColor = .gray
+        setTapBar()
+        
 
     }
     
@@ -59,9 +59,29 @@ extension HomeBarController {
         
     }
     
-    
-    
+    private func setTapBar() {
+        tabBar.tintColor = .systemIndigo
+        tabBar.barTintColor = .white
+        tabBar.unselectedItemTintColor = .systemGray
+        
+        let appearance = UITabBarItem.appearance()
+        let attributes = [NSAttributedString.Key.font:UIFont(name: "Apple SD Gothic Neo Light", size: 12)]
+        
+        appearance.setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
+    }
     
     
 }
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 

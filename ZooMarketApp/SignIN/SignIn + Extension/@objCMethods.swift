@@ -85,7 +85,23 @@ extension SignInView {
     }
     
     @objc func signInButtonTapped(_ sender: UIButton) {
-        signInButtonDelegate?.signInButtonDidTapped()
+        
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        
+        if (email!.isEmpty) && (password!.isEmpty) {
+            alertMessageDelegate?.signInAlertMessage("Заполните пустующие поля")
+        } else if (email!.isEmpty) {
+            alertMessageDelegate?.signInAlertMessage("Введите адрес электронной почты")
+    
+        } else if (password!.isEmpty) {
+            alertMessageDelegate?.signInAlertMessage("Введите пароль")
+        } else {
+            
+            signInButtonDelegate?.signInButtonDidTapped()
+
+        }
+        
     }
     
     

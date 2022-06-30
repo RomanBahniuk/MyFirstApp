@@ -9,11 +9,11 @@ import UIKit
 
 final class SignInView: UIView {
     
-     var emailPlaceholderCenterYConstraints: NSLayoutConstraint!
-     var emailPlaceholderLeftAnchorConstraints: NSLayoutConstraint!
+    var emailPlaceholderCenterYConstraints: NSLayoutConstraint!
+    var emailPlaceholderLeftAnchorConstraints: NSLayoutConstraint!
     
-     var passwordPlaceHolderCenterYConstraints: NSLayoutConstraint!
-     var passwordPlaceholderLeftAnchorConstraints: NSLayoutConstraint!
+    var passwordPlaceHolderCenterYConstraints: NSLayoutConstraint!
+    var passwordPlaceholderLeftAnchorConstraints: NSLayoutConstraint!
     
     var signInButtonBottomAnchor: NSLayoutConstraint!
     var signInButtonLeftAnchor: NSLayoutConstraint!
@@ -21,10 +21,10 @@ final class SignInView: UIView {
     
     
     
-     var dontHaveAnAccountBottomAnchor: NSLayoutConstraint!
+    var dontHaveAnAccountBottomAnchor: NSLayoutConstraint!
     
-     var isTapped = true
-     var isKeyboardMoves = true
+    var isTapped = true
+    var isKeyboardMoves = true
     
     
     var emailValidType: String.ValidTypes = .email
@@ -33,6 +33,7 @@ final class SignInView: UIView {
     
     weak var createAnAccountDelegate: CreateAnAccountDelegate?
     weak var signInButtonDelegate: SignInButton?
+    weak var alertMessageDelegate: SignInAlert?
     
     
     
@@ -108,13 +109,13 @@ final class SignInView: UIView {
     
     
     lazy var emailValidLabel: UILabel = {
-            let userEmailValidLabel = UILabel()
-            userEmailValidLabel.font = UIFont(name: "Apple SD Gothic Neo Light", size: 12)
-            
-            
-            
-            return userEmailValidLabel
-        }()
+        let userEmailValidLabel = UILabel()
+        userEmailValidLabel.font = UIFont(name: "Apple SD Gothic Neo Light", size: 12)
+        
+        
+        
+        return userEmailValidLabel
+    }()
     
     
     
@@ -159,13 +160,13 @@ final class SignInView: UIView {
     
     
     lazy var passwordValidLabel: UILabel = {
-            let passwordValidLabel = UILabel()
+        let passwordValidLabel = UILabel()
         passwordValidLabel.font = UIFont(name: "Apple SD Gothic Neo Light", size: 12)
-            
-            
-            
-            return passwordValidLabel
-        }()
+        
+        
+        
+        return passwordValidLabel
+    }()
     
     
     lazy var passwordPlaceHolder: UILabel = {
@@ -182,7 +183,7 @@ final class SignInView: UIView {
     
     
     lazy var passwordHideShowButton: UIButton = {
-       let passwordHideShowButton = UIButton()
+        let passwordHideShowButton = UIButton()
         passwordHideShowButton.setImage(UIImage(named: "HidePassword"), for: .normal)
         passwordHideShowButton.setImage(UIImage(named: "ShowPassword"), for: .highlighted)
         passwordHideShowButton.tintColor = .black
@@ -199,7 +200,7 @@ final class SignInView: UIView {
         forgetPasswordButton.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Light", size: 14)
         forgetPasswordButton.backgroundColor = .clear
         
-    
+        
         return forgetPasswordButton
         
     }()
@@ -231,7 +232,7 @@ final class SignInView: UIView {
     }()
     
     lazy var signInButton: UIButton = {
-       let signInButton = UIButton()
+        let signInButton = UIButton()
         signInButton.setTitle("Войти", for: .normal)
         signInButton.titleLabel?.font = UIFont(name: "Apple SD Gothic Medium", size: 14)
         signInButton.setTitleColor(UIColor.white, for: .normal)
@@ -253,7 +254,7 @@ final class SignInView: UIView {
     }()
     
     lazy var createAccountButton: UIButton = {
-       let createAccountButton = UIButton()
+        let createAccountButton = UIButton()
         createAccountButton.backgroundColor = .clear
         createAccountButton.titleLabel?.font = UIFont(name: "Apple SD Gothic Neo Light", size: 14)
         let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.thick.rawValue]
@@ -286,7 +287,7 @@ final class SignInView: UIView {
     }()
     
     lazy var betweenLinesLabel: UILabel = {
-       let betweenLinesLabel = UILabel()
+        let betweenLinesLabel = UILabel()
         betweenLinesLabel.text = "или"
         betweenLinesLabel.font = UIFont(name: "Apple SD Gothic Neo Medium", size: 14)
         betweenLinesLabel.textColor = .systemGray
@@ -304,6 +305,8 @@ final class SignInView: UIView {
         setConstraints()
         keyboardGesture()
         
+        addLeftViewTo(textField: emailTextField)
+        addLeftViewTo(textField: passwordTextField)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -343,7 +346,7 @@ private extension SignInView {
         addSubview(leftSingleLine)
         addSubview(betweenLinesLabel)
         addSubview(rightSingleLine)
-
+        
     }
     
     func setConstraints() {
@@ -369,7 +372,7 @@ private extension SignInView {
         leftSingleLineConstraints()
         betweenLinesLabelConstraints()
         rightSingleLineConstraints()
-
+        
     }
     
     func singInLogoConstraints() {
@@ -516,18 +519,18 @@ private extension SignInView {
         
         forgetPasswordButton.translatesAutoresizingMaskIntoConstraints = false
         [forgetPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 8),
-        forgetPasswordButton.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -34),
+         forgetPasswordButton.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -34),
          forgetPasswordButton.heightAnchor.constraint(equalToConstant: 12)].forEach {
             $0.isActive = true
         }
     }
     
-
+    
     func signWithGoogleConstraints() {
         signWithGoogle.translatesAutoresizingMaskIntoConstraints = false
         [signWithGoogle.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -116),
-        signWithGoogle.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -64),
-        signWithGoogle.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 64),
+         signWithGoogle.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -64),
+         signWithGoogle.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 64),
          signWithGoogle.heightAnchor.constraint(equalToConstant: 40)].forEach {
             $0.isActive = true
         }
@@ -537,8 +540,8 @@ private extension SignInView {
     func signWithAppleConstraints() {
         signWithApple.translatesAutoresizingMaskIntoConstraints = false
         [signWithApple.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -64),
-        signWithApple.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -64),
-        signWithApple.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 64),
+         signWithApple.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -64),
+         signWithApple.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 64),
          signWithApple.heightAnchor.constraint(equalToConstant: 40)].forEach {
             $0.isActive = true
             
@@ -546,7 +549,7 @@ private extension SignInView {
     }
     
     
-
+    
     func signInButtonConstraints() {
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         signInButtonBottomAnchor = signInButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -224)
@@ -560,7 +563,7 @@ private extension SignInView {
         leftSingleLine.translatesAutoresizingMaskIntoConstraints = false
         [leftSingleLine.bottomAnchor.constraint(equalTo: signWithGoogle.topAnchor, constant: -32),
          leftSingleLine.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 96),
-        leftSingleLine.widthAnchor.constraint(equalToConstant: 96),
+         leftSingleLine.widthAnchor.constraint(equalToConstant: 96),
          leftSingleLine.heightAnchor.constraint(equalToConstant: 1)].forEach {
             $0.isActive = true
         }
@@ -570,7 +573,7 @@ private extension SignInView {
     func betweenLinesLabelConstraints() {
         betweenLinesLabel.translatesAutoresizingMaskIntoConstraints = false
         [betweenLinesLabel.centerYAnchor.constraint(equalTo: leftSingleLine.centerYAnchor, constant: 0),
-        betweenLinesLabel.leftAnchor.constraint(equalTo: leftSingleLine.rightAnchor, constant: 12),
+         betweenLinesLabel.leftAnchor.constraint(equalTo: leftSingleLine.rightAnchor, constant: 12),
          betweenLinesLabel.rightAnchor.constraint(equalTo: rightSingleLine.leftAnchor, constant: -2)].forEach {
             $0.isActive = true
         }
@@ -606,8 +609,8 @@ private extension SignInView {
             $0.isActive = true
         }
     }
-
-
+    
+    
     
 }
 

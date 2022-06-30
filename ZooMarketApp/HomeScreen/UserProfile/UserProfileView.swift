@@ -12,7 +12,9 @@ class UserProfileView: UIView {
     
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .plain)
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
         
         
         
@@ -47,14 +49,14 @@ private extension UserProfileView {
     }
     
     func setConstraints() {
-        //tableViewConstraints()
+        tableViewConstraints()
     }
     
     // MARK: Constraints
     
     func tableViewConstraints() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        [tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
+        [tableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0),
         tableView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0),
         tableView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0),
          tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)].forEach {

@@ -20,7 +20,7 @@ extension SignInView: UITextFieldDelegate {
     
     
     
-    func setTextfield(textField: UITextField, label: UILabel, validLine: UIView, validType: String.ValidTypes, validMessage: String, wrongValidMessage: String, string: String, range: NSRange) {
+    func setTextfield(textField: UITextField, label: UILabel, validLine: UIView, validType: String.ValidTypes, wrongValidMessage: String, string: String, range: NSRange) {
         
         let text = (textField.text ?? "") + string
         let result: String
@@ -35,10 +35,17 @@ extension SignInView: UITextFieldDelegate {
         textField.text = result
         
         if result.isValid(validType: validType) {
-            label.text = validMessage
-            label.textColor = .systemGreen
+            
+            label.textColor = .clear
             validLine.layer.borderColor = UIColor.clear.cgColor
+            
+        } else if !result.isValid(validType: validType) && textField.text!.isEmpty  {
+            
+            label.textColor = .clear
+            validLine.layer.borderColor = UIColor.clear.cgColor
+            
         } else {
+            
             label.text = wrongValidMessage
             label.textColor = .systemRed
             validLine.layer.borderColor = UIColor.systemRed.cgColor
@@ -52,8 +59,8 @@ extension SignInView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         switch textField {
-        case emailTextField: setTextfield(textField: emailTextField, label: emailValidLabel, validLine: emailValidLine, validType: emailValidType, validMessage: "", wrongValidMessage: "Некорректный адрес электронной почты", string: string, range: range)
-        case passwordTextField: setTextfield(textField: passwordTextField, label: passwordValidLabel, validLine: passwordValidLine, validType: passwordValidType, validMessage: "", wrongValidMessage: "Минимум 6 символов", string: string, range: range)
+        case emailTextField: setTextfield(textField: emailTextField, label: emailValidLabel, validLine: emailValidLine, validType: emailValidType, wrongValidMessage: "Некорректный адрес электронной почты", string: string, range: range)
+        case passwordTextField: setTextfield(textField: passwordTextField, label: passwordValidLabel, validLine: passwordValidLine, validType: passwordValidType, wrongValidMessage: "Минимум 6 символов", string: string, range: range)
         default: break
         }
         
@@ -131,6 +138,18 @@ extension SignInView: UITextFieldDelegate {
             self.layoutIfNeeded()
             
         })
+    }
+    
+    func addLeftViewTo(textField: UITextField) {
+        
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 40))
+        leftView.layer.cornerRadius = 16
+        leftView.backgroundColor = .systemGray6
+        
+        textField.leftView = leftView
+        textField.leftViewMode = .always
+        
+        
     }
     
     

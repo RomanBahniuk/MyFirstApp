@@ -15,6 +15,9 @@ class SignUpView: UIView {
     var userNamePlaceholderCenterYAnchor: NSLayoutConstraint!
     var userNamePlaceholderLeftAnchor: NSLayoutConstraint!
     
+    var userSecondNamePlaceholderCenterYAnchor: NSLayoutConstraint!
+    var userSecondNamePlaceholderLeftAnchor: NSLayoutConstraint!
+    
     var userEmailPlaceholderCenterYAnchor: NSLayoutConstraint!
     var userEmailPlaceholderLeftAnchor: NSLayoutConstraint!
     
@@ -30,13 +33,15 @@ class SignUpView: UIView {
     
     
     var UserNameValidType: String.ValidTypes = .userName
+    var UserSecondNameValidType: String.ValidTypes = .userSecondName
     var UserEmailValidType: String.ValidTypes = .email
     var UserPasswordValidType: String.ValidTypes = .password
     
     
     
     
-    weak var signUpButtonDelegate: signUpButton?
+    weak var signUpButtonDelegate: SignUpButton?
+    weak var signUpAlertDelegate: SignUpAlert?
     
     
     
@@ -119,6 +124,54 @@ class SignUpView: UIView {
         return userNamePlaceholder
         
     }()
+    
+    
+    lazy var userSecondNameTextField: UITextField = {
+        let userSecondNameTextField = UITextField()
+        userSecondNameTextField.backgroundColor = .systemGray6
+        userSecondNameTextField.layer.cornerRadius = 16
+        userSecondNameTextField.autocorrectionType = .no
+        userSecondNameTextField.spellCheckingType = .no
+        userSecondNameTextField.returnKeyType = .done
+        
+        return userSecondNameTextField
+        
+    }()
+    
+    
+    lazy var userSecondNameValidLabel: UILabel = {
+        let userSecondNameValidLabel = UILabel()
+        userSecondNameValidLabel.font = UIFont(name: "Apple SD Gothic Neo Light", size: 12)
+        
+        
+        
+        return userSecondNameValidLabel
+    }()
+    
+    
+    lazy var userSecondNameValidLine: UIView = {
+        let userSecondNameValidLine = UIView()
+        userSecondNameValidLine.layer.borderWidth = 1.5
+        userSecondNameValidLine.layer.borderColor = UIColor.clear.cgColor
+        userSecondNameValidLine.layer.cornerRadius = 6
+        
+        
+        return userSecondNameValidLine
+    }()
+    
+    lazy var userSecondNamePlaceholder: UILabel = {
+        let userSecondNamePlaceholder = UILabel()
+        userSecondNamePlaceholder.text = "   Ваша фамилия"
+        userSecondNamePlaceholder.font = UIFont(name: "Apple SD Gothic Neo Light", size: 14)
+        userSecondNamePlaceholder.textColor = .systemGray
+        
+        
+        return userSecondNamePlaceholder
+        
+    }()
+    
+    
+    
     
     lazy var userEmailTextField: UITextField = {
         let userEmailTextField = UITextField()
@@ -251,11 +304,17 @@ class SignUpView: UIView {
     override init(frame: CGRect) {
         super .init(frame: frame)
         userNameTextField.delegate = self
+        userSecondNameTextField.delegate = self
         userEmailTextField.delegate = self
         userPasswordTextfield.delegate = self
         addSubviews()
         setConstraints()
         keyboardGesture()
+        
+        addLeftViewTo(textField: userNameTextField)
+        addLeftViewTo(textField: userSecondNameTextField)
+        addLeftViewTo(textField: userEmailTextField)
+        addLeftViewTo(textField: userPasswordTextfield)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -277,6 +336,8 @@ private extension SignUpView {
         addSubview(registrationLabel)
         addSubview(userNameTextField)
         addSubview(userNamePlaceholder)
+        addSubview(userSecondNameTextField)
+        addSubview(userSecondNamePlaceholder)
         addSubview(userEmailTextField)
         addSubview(userEmailPlaceholder)
         addSubview(userPasswordTextfield)
@@ -284,9 +345,11 @@ private extension SignUpView {
         addSubview(userPasswordHideShowButton)
         addSubview(finishRegistrationButton)
         addSubview(userNameValidLabel)
+        addSubview(userSecondNameValidLabel)
         addSubview(userEmailValidLabel)
         addSubview(userPasswordValidLabel)
         addSubview(userNameValidLine)
+        addSubview(userSecondNameValidLine)
         addSubview(userEmailValidLine)
         addSubview(userPasswordValidLine)
         
@@ -300,6 +363,8 @@ private extension SignUpView {
         registrationLabelConstraints()
         userNameTextFieldConstraints()
         userNamePlaceholderConstraints()
+        userSecondNameTextFieldConstraints()
+        userSecondNamePlaceholderConstraints()
         userEmailTextFieldConstraints()
         userEmailPlaceholderConstraints()
         userPasswordTextfieldConstraints()
@@ -307,9 +372,11 @@ private extension SignUpView {
         userPasswordHideShowButtonConstraints()
         finishRegistrationButtonConstraints()
         userNameValidLabelConstraints()
+        userSecondNameValidLabelConstraints()
         userEmailValidLabelConstraints()
         userPasswordValidLabelConstraints()
         userNameValidLineConstraints()
+        userSecondNameValidLineConstraints()
         userEmailValidLineConstraints()
         userPasswordValidLineConstraints()
         
@@ -383,9 +450,50 @@ private extension SignUpView {
     }
     
     
+    func userSecondNameTextFieldConstraints() {
+        userSecondNameTextField.translatesAutoresizingMaskIntoConstraints = false
+        [userSecondNameTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: 24),
+         userSecondNameTextField.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 32),
+         userSecondNameTextField.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -32),
+         userSecondNameTextField.heightAnchor.constraint(equalToConstant: 40)].forEach {
+            $0.isActive = true
+        }
+        
+    }
+    
+    func userSecondNameValidLineConstraints() {
+        userSecondNameValidLine.translatesAutoresizingMaskIntoConstraints = false
+        [userSecondNameValidLine.bottomAnchor.constraint(equalTo: userSecondNameTextField.bottomAnchor, constant: -1.5),
+         userSecondNameValidLine.leftAnchor.constraint(equalTo: userSecondNameTextField.leftAnchor, constant: 12),
+         userSecondNameValidLine.rightAnchor.constraint(equalTo: userSecondNameTextField.rightAnchor, constant: -12),
+         userSecondNameValidLine.heightAnchor.constraint(equalToConstant: 1.5)].forEach {
+            $0.isActive = true
+        }
+    }
+    
+    
+    func userSecondNameValidLabelConstraints() {
+        userSecondNameValidLabel.translatesAutoresizingMaskIntoConstraints = false
+        [userSecondNameValidLabel.topAnchor.constraint(equalTo: userSecondNameTextField.bottomAnchor, constant: 2),
+         userSecondNameValidLabel.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 48),
+         userSecondNameValidLabel.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -36)].forEach {
+            $0.isActive = true
+        }
+    }
+    
+    
+    func userSecondNamePlaceholderConstraints() {
+        userSecondNamePlaceholder.translatesAutoresizingMaskIntoConstraints = false
+        userSecondNamePlaceholderCenterYAnchor = userSecondNamePlaceholder.centerYAnchor.constraint(equalTo: userSecondNameTextField.centerYAnchor, constant: 0)
+        userSecondNamePlaceholderLeftAnchor = userSecondNamePlaceholder.leftAnchor.constraint(equalTo: userSecondNameTextField.leftAnchor, constant: 0)
+        NSLayoutConstraint.activate([userSecondNamePlaceholderCenterYAnchor, userSecondNamePlaceholderLeftAnchor])
+        
+    }
+    
+    
     func userEmailTextFieldConstraints() {
         userEmailTextField.translatesAutoresizingMaskIntoConstraints = false
-        [userEmailTextField.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: 24),
+        [userEmailTextField.topAnchor.constraint(equalTo: userSecondNameTextField.bottomAnchor, constant: 24),
          userEmailTextField.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 32),
          userEmailTextField.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -32),
          userEmailTextField.heightAnchor.constraint(equalToConstant: 40)].forEach {

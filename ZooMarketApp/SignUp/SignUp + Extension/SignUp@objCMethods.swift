@@ -12,6 +12,8 @@ import UIKit
 
 extension SignUpView {
     
+    
+    
     @objc func hideKeyboard() {
         self.endEditing(true)
     }
@@ -63,7 +65,54 @@ extension SignUpView {
     }
     
     @objc func signUpButtonPresent(_ sender: UIButton) {
-        signUpButtonDelegate?.signUpButtonDidTapped()
+        
+        let userName = userNameTextField.text
+        let userSecondName = userSecondNameTextField.text
+        let userEmail = userEmailTextField.text
+        let userPassword = userPasswordTextfield.text
+        
+        
+        if (userName!.isEmpty) && (userSecondName!.isEmpty) && (userEmail!.isEmpty) && (userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Заполните пустующие поля")
+        } else if (!userName!.isEmpty) && (userSecondName!.isEmpty) && (userEmail!.isEmpty) && (userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Заполните пустующие поля")
+        } else if (userName!.isEmpty) && (!userSecondName!.isEmpty) && (userEmail!.isEmpty) && (userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Заполните пустующие поля")
+        } else if (userName!.isEmpty) && (userSecondName!.isEmpty) && (!userEmail!.isEmpty) && (userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Заполните пустующие поля")
+        } else if (userName!.isEmpty) && (userSecondName!.isEmpty) && (userEmail!.isEmpty) && (!userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Заполните пустующие поля")
+        } else if (userName!.isEmpty) && (userSecondName!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите Ваше Имя и Фамилию")
+        } else if (userName!.isEmpty) && (userEmail!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите Ваше Имя и адрес электронной почты")
+        } else if (userName!.isEmpty) && (userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите Ваше Имя и пароль")
+        } else if (userName!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите Ваше Имя")
+            userNameTextField.becomeFirstResponder()
+        } else if (userSecondName!.isEmpty) && (userEmail!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите Вашу Фамилию и адрес электронной почты")
+        } else if (userSecondName!.isEmpty) && (userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите Вашу Фамилию и пароль")
+        } else if (userSecondName!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите Вашу Фамилию")
+        } else if (userEmail!.isEmpty) && (userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите адрес электронной почты и пароль")
+        } else if (userEmail!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите адрес электронной почты")
+        } else if (userPassword!.isEmpty) {
+            signUpAlertDelegate?.signUpAlertMessage("Введите пароль")
+        } else {
+            signUpButtonDelegate?.signUpButtonDidTapped()
+
+        }
+        
+        
+        
+        
+        
+        
     }
     
 }

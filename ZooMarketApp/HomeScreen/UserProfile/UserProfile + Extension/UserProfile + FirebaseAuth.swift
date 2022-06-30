@@ -8,27 +8,70 @@
 import Foundation
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
+import FirebaseFirestore
 
 
 
 extension UserProfileController {
     
     
-//    func loadUserData() {
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//        Database.database().reference().child("users").child(uid).child("username").observeSingleEvent(of: .value) { (snapshot) in
-//            guard let username = snapshot.value as? String else { return }
-//            self.exLabel.text = "Привет, \(username)"
-//            self.exLabel.alpha = 1
-//
-//        }
-//    }
+    func loadUserData() {
+        
+        
+        let dataBase = Firestore.firestore()
+        let userID = Auth.auth().currentUser?.uid
+        
+        let storageRef = Storage.storage().reference(withPath: "UserProfilePhoto")
+        let userProfilePhoto = storageRef.child("\(userID!)")
+        
+        userProfilePhoto.getData(maxSize: 1 * 1024 * 1024) { data, err in
+            if let err = err {
+                print("\(err.localizedDescription)")
+            } else {
+                self.userHeader.userImage.image = UIImage(data: data!)
+            }
+        }
+        
+        
+        dataBase.collection("FirestoreUsers").whereField("userID", isEqualTo: userID!).addSnapshotListener {(snap, err) in
+            if err != nil {
+                print("err!:\(err?.localizedDescription ?? "" )")
+                return
+            }
+            
+            for i in snap!.documentChanges {
+                
+                let userName = i.document.get("userName") as! String
+                let userSecondName = i.document.get("userSecondName") as! String
+                let email = i.document.get("email") as! String
+                DispatchQueue.main.async {
+                    self.userHeader.userFirstName.text = "\(userName)"
+                    self.userHeader.userSecondName.text = "\(userSecondName)"
+                    self.userHeader.userEmail.text = ("\(email)")
+
+                }
+            }
+            
+        }
+        
+        
+        
+        
+
+        }
+    
+    
+    
+    
+    
     
     
     func signOut() {
         
         do {
             try Auth.auth().signOut()
+            
             let signInViewController = UINavigationController(rootViewController: SignInController())
             signInViewController.modalPresentationStyle = .fullScreen
             self.present(signInViewController, animated: true)
@@ -36,4 +79,9 @@ extension UserProfileController {
             print("Sign out is failed!", error)
         }
     }
+    
+    
+
+
+
 }

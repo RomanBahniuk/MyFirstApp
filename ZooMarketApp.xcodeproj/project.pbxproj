@@ -8,16 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		528AFF569071FFA97E02BA9C /* Pods_ZooMarketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */; };
-		A5012F4D2857EC2D0029F03F /* SignIn + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5012F4C2857EC2D0029F03F /* SignIn + FirebaseAuth.swift */; };
+		A5238610285FB50200BC0D69 /* PersonalDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523860F285FB50200BC0D69 /* PersonalDataController.swift */; };
+		A5238612285FB54000BC0D69 /* PersonalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238611285FB54000BC0D69 /* PersonalDataView.swift */; };
+		A5238615285FBC8200BC0D69 /* AppThemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238614285FBC8200BC0D69 /* AppThemeController.swift */; };
+		A5238617285FBCB800BC0D69 /* AppThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238616285FBCB800BC0D69 /* AppThemeView.swift */; };
+		A523861A285FBE0600BC0D69 /* PersonalData@objcMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238619285FBE0600BC0D69 /* PersonalData@objcMethods.swift */; };
+		A52ABB46285A58F60089A832 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52ABB45285A58F60089A832 /* UIColor + Extension.swift */; };
+		A535E477286083E600D95564 /* PersonalData + TextFieldSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535E476286083E600D95564 /* PersonalData + TextFieldSetup.swift */; };
+		A547D74B28624BF30080B180 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547D74A28624BF30080B180 /* UserDatabase.swift */; };
 		A5509ECB2857D0C200A1A8AB /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509ECA2857D0C200A1A8AB /* UserProfileView.swift */; };
 		A5509ECE2857D62700A1A8AB /* @objcMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509ECD2857D62700A1A8AB /* @objcMethods.swift */; };
-		A5509ED02857E16C00A1A8AB /* SignUp + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5509ECF2857E16C00A1A8AB /* SignUp + FirebaseAuth.swift */; };
 		A5509ED22857EA0C00A1A8AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5509ED12857EA0C00A1A8AB /* GoogleService-Info.plist */; };
+		A5521933285B04CA0073D3CF /* UserProfileColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5521932285B04CA0073D3CF /* UserProfileColor + Extension.swift */; };
+		A5546D4E28631A5B00AD05D9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5546D4D28631A5B00AD05D9 /* UserModel.swift */; };
 		A575B62F2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B62E2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift */; };
 		A575B6322858000E00D6114C /* HomeBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B6312858000E00D6114C /* HomeBarController.swift */; };
 		A575B6342858008B00D6114C /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B6332858008B00D6114C /* MainPageController.swift */; };
 		A575B636285800FC00D6114C /* CatalogPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B635285800FC00D6114C /* CatalogPageController.swift */; };
 		A575B63B2858021100D6114C /* ProductCartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B63A2858021100D6114C /* ProductCartPage.swift */; };
+		A57AFE7E286C619E0070D0A4 /* FirebaseNetworkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE7D286C619E0070D0A4 /* FirebaseNetworkData.swift */; };
+		A586360E286115E600AF7CE6 /* PersonalDataGesureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */; };
+		A586361128611DC800AF7CE6 /* AppTheme@objcMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586361028611DC800AF7CE6 /* AppTheme@objcMethods.swift */; };
+		A58636132861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58636122861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift */; };
+		A587973B2866644E00106001 /* FirestoreUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A587973A2866644E00106001 /* FirestoreUserData.swift */; };
 		A59D120228570B850069DC3E /* TextFieldSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120128570B850069DC3E /* TextFieldSetup.swift */; };
 		A59D120428570CBB0069DC3E /* @objCMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120328570CBB0069DC3E /* @objCMethods.swift */; };
 		A59D120628570D620069DC3E /* GestureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120528570D620069DC3E /* GestureSetup.swift */; };
@@ -25,6 +38,8 @@
 		A59D120B28570FE10069DC3E /* AuthTextFieldSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120A28570FE10069DC3E /* AuthTextFieldSetup.swift */; };
 		A59D120D285710830069DC3E /* SignUp@objCMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120C285710830069DC3E /* SignUp@objCMethods.swift */; };
 		A59D120F285710F30069DC3E /* SignUpGestureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120E285710F30069DC3E /* SignUpGestureSetup.swift */; };
+		A5A77F7F2859C47200AB599F /* SignIn + Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A77F7E2859C47200AB599F /* SignIn + Protocol.swift */; };
+		A5A77F812859D27200AB599F /* SignUp + Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A77F802859D27200AB599F /* SignUp + Protocol.swift */; };
 		A5AA876F2850FAD2008D045B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA876E2850FAD2008D045B /* AppDelegate.swift */; };
 		A5AA87712850FAD2008D045B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87702850FAD2008D045B /* SceneDelegate.swift */; };
 		A5AA87732850FAD2008D045B /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87722850FAD2008D045B /* UserProfileController.swift */; };
@@ -35,6 +50,7 @@
 		A5AA87862850FBB2008D045B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87852850FBB2008D045B /* SignInView.swift */; };
 		A5AA87892854EB37008D045B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87882854EB37008D045B /* SignUpController.swift */; };
 		A5AA878B2854EBA2008D045B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA878A2854EBA2008D045B /* SignUpView.swift */; };
+		A5B38B6B285E5BC800CFBF88 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5B38B6A285E5BC800CFBF88 /* credentials.plist */; };
 		A5F094DF28585FD3000A5F70 /* TabBar + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094DE28585FD3000A5F70 /* TabBar + FirebaseAuth.swift */; };
 		A5F094E128586680000A5F70 /* TableView + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E028586680000A5F70 /* TableView + Delegate.swift */; };
 		A5F094E328587BCD000A5F70 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E228587BCD000A5F70 /* UserProfileCell.swift */; };
@@ -46,16 +62,29 @@
 		007F1A70FE9E44B2C7C84318 /* Pods-ZooMarketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooMarketApp.debug.xcconfig"; path = "Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1DE9FA7B19D6D883C7BF77C5 /* Pods-ZooMarketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooMarketApp.release.xcconfig"; path = "Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp.release.xcconfig"; sourceTree = "<group>"; };
 		894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooMarketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5012F4C2857EC2D0029F03F /* SignIn + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn + FirebaseAuth.swift"; sourceTree = "<group>"; };
+		A523860F285FB50200BC0D69 /* PersonalDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataController.swift; sourceTree = "<group>"; };
+		A5238611285FB54000BC0D69 /* PersonalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataView.swift; sourceTree = "<group>"; };
+		A5238614285FBC8200BC0D69 /* AppThemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeController.swift; sourceTree = "<group>"; };
+		A5238616285FBCB800BC0D69 /* AppThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeView.swift; sourceTree = "<group>"; };
+		A5238619285FBE0600BC0D69 /* PersonalData@objcMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData@objcMethods.swift"; sourceTree = "<group>"; };
+		A52ABB45285A58F60089A832 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		A535E476286083E600D95564 /* PersonalData + TextFieldSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData + TextFieldSetup.swift"; sourceTree = "<group>"; };
+		A547D74A28624BF30080B180 /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
 		A5509ECA2857D0C200A1A8AB /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		A5509ECD2857D62700A1A8AB /* @objcMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "@objcMethods.swift"; sourceTree = "<group>"; };
-		A5509ECF2857E16C00A1A8AB /* SignUp + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp + FirebaseAuth.swift"; sourceTree = "<group>"; };
 		A5509ED12857EA0C00A1A8AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A5521932285B04CA0073D3CF /* UserProfileColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfileColor + Extension.swift"; sourceTree = "<group>"; };
+		A5546D4D28631A5B00AD05D9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		A575B62E2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile + FirebaseAuth.swift"; sourceTree = "<group>"; };
 		A575B6312858000E00D6114C /* HomeBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBarController.swift; sourceTree = "<group>"; };
 		A575B6332858008B00D6114C /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
 		A575B635285800FC00D6114C /* CatalogPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPageController.swift; sourceTree = "<group>"; };
 		A575B63A2858021100D6114C /* ProductCartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartPage.swift; sourceTree = "<group>"; };
+		A57AFE7D286C619E0070D0A4 /* FirebaseNetworkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkData.swift; sourceTree = "<group>"; };
+		A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataGesureSetup.swift; sourceTree = "<group>"; };
+		A586361028611DC800AF7CE6 /* AppTheme@objcMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTheme@objcMethods.swift"; sourceTree = "<group>"; };
+		A58636122861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData + DatePickerSetup.swift"; sourceTree = "<group>"; };
+		A587973A2866644E00106001 /* FirestoreUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserData.swift; sourceTree = "<group>"; };
 		A59D120128570B850069DC3E /* TextFieldSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldSetup.swift; sourceTree = "<group>"; };
 		A59D120328570CBB0069DC3E /* @objCMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "@objCMethods.swift"; sourceTree = "<group>"; };
 		A59D120528570D620069DC3E /* GestureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureSetup.swift; sourceTree = "<group>"; };
@@ -63,6 +92,8 @@
 		A59D120A28570FE10069DC3E /* AuthTextFieldSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextFieldSetup.swift; sourceTree = "<group>"; };
 		A59D120C285710830069DC3E /* SignUp@objCMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp@objCMethods.swift"; sourceTree = "<group>"; };
 		A59D120E285710F30069DC3E /* SignUpGestureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGestureSetup.swift; sourceTree = "<group>"; };
+		A5A77F7E2859C47200AB599F /* SignIn + Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn + Protocol.swift"; sourceTree = "<group>"; };
+		A5A77F802859D27200AB599F /* SignUp + Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp + Protocol.swift"; sourceTree = "<group>"; };
 		A5AA876B2850FAD2008D045B /* ZooMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AA876E2850FAD2008D045B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5AA87702850FAD2008D045B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +106,7 @@
 		A5AA87852850FBB2008D045B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		A5AA87882854EB37008D045B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		A5AA878A2854EBA2008D045B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A5B38B6A285E5BC800CFBF88 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		A5F094DE28585FD3000A5F70 /* TabBar + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBar + FirebaseAuth.swift"; sourceTree = "<group>"; };
 		A5F094E028586680000A5F70 /* TableView + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Delegate.swift"; sourceTree = "<group>"; };
 		A5F094E228587BCD000A5F70 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
@@ -94,9 +126,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A523860E285FB49500BC0D69 /* PersonalDataSettings */ = {
+			isa = PBXGroup;
+			children = (
+				A523860F285FB50200BC0D69 /* PersonalDataController.swift */,
+				A5238611285FB54000BC0D69 /* PersonalDataView.swift */,
+				A5238618285FBDD200BC0D69 /* PersonalDataSttings + Extension */,
+			);
+			path = PersonalDataSettings;
+			sourceTree = "<group>";
+		};
+		A5238613285FBC5C00BC0D69 /* AppTheme */ = {
+			isa = PBXGroup;
+			children = (
+				A5238614285FBC8200BC0D69 /* AppThemeController.swift */,
+				A5238616285FBCB800BC0D69 /* AppThemeView.swift */,
+				A586360F28611D3600AF7CE6 /* AppTheme + Extension */,
+			);
+			path = AppTheme;
+			sourceTree = "<group>";
+		};
+		A5238618285FBDD200BC0D69 /* PersonalDataSttings + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A535E476286083E600D95564 /* PersonalData + TextFieldSetup.swift */,
+				A5238619285FBE0600BC0D69 /* PersonalData@objcMethods.swift */,
+				A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */,
+				A58636122861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift */,
+			);
+			path = "PersonalDataSttings + Extension";
+			sourceTree = "<group>";
+		};
+		A547D74928624B9D0080B180 /* Firebase + Database */ = {
+			isa = PBXGroup;
+			children = (
+				A547D74A28624BF30080B180 /* UserDatabase.swift */,
+				A5546D4D28631A5B00AD05D9 /* UserModel.swift */,
+				A587973A2866644E00106001 /* FirestoreUserData.swift */,
+				A57AFE7D286C619E0070D0A4 /* FirebaseNetworkData.swift */,
+			);
+			path = "Firebase + Database";
+			sourceTree = "<group>";
+		};
 		A5509EC92857D06800A1A8AB /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				A5238613285FBC5C00BC0D69 /* AppTheme */,
+				A523860E285FB49500BC0D69 /* PersonalDataSettings */,
 				A5AA87722850FAD2008D045B /* UserProfileController.swift */,
 				A5509ECA2857D0C200A1A8AB /* UserProfileView.swift */,
 				A5F094E228587BCD000A5F70 /* UserProfileCell.swift */,
@@ -112,6 +188,7 @@
 				A5F094E72858A752000A5F70 /* UserHeader.swift */,
 				A5509ECD2857D62700A1A8AB /* @objcMethods.swift */,
 				A575B62E2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift */,
+				A5521932285B04CA0073D3CF /* UserProfileColor + Extension.swift */,
 			);
 			path = "UserProfile + Extension";
 			sourceTree = "<group>";
@@ -153,22 +230,30 @@
 			path = ProductCart;
 			sourceTree = "<group>";
 		};
-		A59D120028570B360069DC3E /* SingIn + Extension */ = {
+		A586360F28611D3600AF7CE6 /* AppTheme + Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A586361028611DC800AF7CE6 /* AppTheme@objcMethods.swift */,
+			);
+			path = "AppTheme + Extension";
+			sourceTree = "<group>";
+		};
+		A59D120028570B360069DC3E /* SignIn + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5A77F7E2859C47200AB599F /* SignIn + Protocol.swift */,
 				A59D120128570B850069DC3E /* TextFieldSetup.swift */,
-				A5012F4C2857EC2D0029F03F /* SignIn + FirebaseAuth.swift */,
 				A59D120328570CBB0069DC3E /* @objCMethods.swift */,
 				A59D120528570D620069DC3E /* GestureSetup.swift */,
 			);
-			path = "SingIn + Extension";
+			path = "SignIn + Extension";
 			sourceTree = "<group>";
 		};
 		A59D120928570FB20069DC3E /* SignUp + Extension */ = {
 			isa = PBXGroup;
 			children = (
 				A59D120A28570FE10069DC3E /* AuthTextFieldSetup.swift */,
-				A5509ECF2857E16C00A1A8AB /* SignUp + FirebaseAuth.swift */,
+				A5A77F802859D27200AB599F /* SignUp + Protocol.swift */,
 				A59D120C285710830069DC3E /* SignUp@objCMethods.swift */,
 				A59D120E285710F30069DC3E /* SignUpGestureSetup.swift */,
 			);
@@ -196,17 +281,19 @@
 		A5AA876D2850FAD2008D045B /* ZooMarketApp */ = {
 			isa = PBXGroup;
 			children = (
+				A547D74928624B9D0080B180 /* Firebase + Database */,
 				A5F094E4285890DB000A5F70 /* Model */,
 				A575B6302857FFA700D6114C /* HomeScreen */,
 				A5AA87822850FB32008D045B /* SignIN */,
 				A5AA87872854EB0C008D045B /* SignUp */,
 				A5AA876E2850FAD2008D045B /* AppDelegate.swift */,
-				A59D120728570E4C0069DC3E /* String + Extension.swift */,
 				A5AA87702850FAD2008D045B /* SceneDelegate.swift */,
+				A59D120728570E4C0069DC3E /* String + Extension.swift */,
 				A5AA87742850FAD2008D045B /* Main.storyboard */,
 				A5AA87772850FAD3008D045B /* Assets.xcassets */,
 				A5AA87792850FAD3008D045B /* LaunchScreen.storyboard */,
 				A5AA877C2850FAD3008D045B /* Info.plist */,
+				A5B38B6A285E5BC800CFBF88 /* credentials.plist */,
 				A5509ED12857EA0C00A1A8AB /* GoogleService-Info.plist */,
 			);
 			path = ZooMarketApp;
@@ -217,7 +304,7 @@
 			children = (
 				A5AA87832850FB73008D045B /* SignInController.swift */,
 				A5AA87852850FBB2008D045B /* SignInView.swift */,
-				A59D120028570B360069DC3E /* SingIn + Extension */,
+				A59D120028570B360069DC3E /* SignIn + Extension */,
 			);
 			path = SignIN;
 			sourceTree = "<group>";
@@ -236,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				A5F094E528589109000A5F70 /* UserProfileSectionsModel.swift */,
+				A52ABB45285A58F60089A832 /* UIColor + Extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +407,7 @@
 			files = (
 				A5509ED22857EA0C00A1A8AB /* GoogleService-Info.plist in Resources */,
 				A5AA877B2850FAD3008D045B /* LaunchScreen.storyboard in Resources */,
+				A5B38B6B285E5BC800CFBF88 /* credentials.plist in Resources */,
 				A5AA87782850FAD3008D045B /* Assets.xcassets in Resources */,
 				A5AA87762850FAD2008D045B /* Main.storyboard in Resources */,
 			);
@@ -375,29 +464,44 @@
 			files = (
 				A5AA87892854EB37008D045B /* SignUpController.swift in Sources */,
 				A5F094E128586680000A5F70 /* TableView + Delegate.swift in Sources */,
+				A5238610285FB50200BC0D69 /* PersonalDataController.swift in Sources */,
 				A59D120228570B850069DC3E /* TextFieldSetup.swift in Sources */,
 				A5AA87732850FAD2008D045B /* UserProfileController.swift in Sources */,
 				A575B6342858008B00D6114C /* MainPageController.swift in Sources */,
 				A59D120D285710830069DC3E /* SignUp@objCMethods.swift in Sources */,
-				A5012F4D2857EC2D0029F03F /* SignIn + FirebaseAuth.swift in Sources */,
 				A59D120428570CBB0069DC3E /* @objCMethods.swift in Sources */,
-				A5509ED02857E16C00A1A8AB /* SignUp + FirebaseAuth.swift in Sources */,
+				A5A77F7F2859C47200AB599F /* SignIn + Protocol.swift in Sources */,
+				A57AFE7E286C619E0070D0A4 /* FirebaseNetworkData.swift in Sources */,
 				A59D120628570D620069DC3E /* GestureSetup.swift in Sources */,
 				A5AA87842850FB73008D045B /* SignInController.swift in Sources */,
 				A5AA876F2850FAD2008D045B /* AppDelegate.swift in Sources */,
 				A575B62F2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift in Sources */,
 				A575B636285800FC00D6114C /* CatalogPageController.swift in Sources */,
+				A5238617285FBCB800BC0D69 /* AppThemeView.swift in Sources */,
 				A59D120828570E4D0069DC3E /* String + Extension.swift in Sources */,
 				A59D120F285710F30069DC3E /* SignUpGestureSetup.swift in Sources */,
+				A5A77F812859D27200AB599F /* SignUp + Protocol.swift in Sources */,
 				A5509ECB2857D0C200A1A8AB /* UserProfileView.swift in Sources */,
+				A535E477286083E600D95564 /* PersonalData + TextFieldSetup.swift in Sources */,
+				A52ABB46285A58F60089A832 /* UIColor + Extension.swift in Sources */,
 				A5F094DF28585FD3000A5F70 /* TabBar + FirebaseAuth.swift in Sources */,
+				A5238615285FBC8200BC0D69 /* AppThemeController.swift in Sources */,
 				A5AA87862850FBB2008D045B /* SignInView.swift in Sources */,
 				A59D120B28570FE10069DC3E /* AuthTextFieldSetup.swift in Sources */,
 				A5F094E328587BCD000A5F70 /* UserProfileCell.swift in Sources */,
 				A575B6322858000E00D6114C /* HomeBarController.swift in Sources */,
+				A586360E286115E600AF7CE6 /* PersonalDataGesureSetup.swift in Sources */,
+				A587973B2866644E00106001 /* FirestoreUserData.swift in Sources */,
+				A5521933285B04CA0073D3CF /* UserProfileColor + Extension.swift in Sources */,
+				A547D74B28624BF30080B180 /* UserDatabase.swift in Sources */,
+				A523861A285FBE0600BC0D69 /* PersonalData@objcMethods.swift in Sources */,
 				A5F094E628589109000A5F70 /* UserProfileSectionsModel.swift in Sources */,
+				A58636132861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift in Sources */,
 				A575B63B2858021100D6114C /* ProductCartPage.swift in Sources */,
+				A5546D4E28631A5B00AD05D9 /* UserModel.swift in Sources */,
 				A5AA878B2854EBA2008D045B /* SignUpView.swift in Sources */,
+				A586361128611DC800AF7CE6 /* AppTheme@objcMethods.swift in Sources */,
+				A5238612285FB54000BC0D69 /* PersonalDataView.swift in Sources */,
 				A5AA87712850FAD2008D045B /* SceneDelegate.swift in Sources */,
 				A5509ECE2857D62700A1A8AB /* @objcMethods.swift in Sources */,
 				A5F094E82858A752000A5F70 /* UserHeader.swift in Sources */,

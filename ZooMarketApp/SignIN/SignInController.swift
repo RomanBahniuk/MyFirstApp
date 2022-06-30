@@ -7,18 +7,12 @@
 
 import UIKit
 
-protocol CreateAnAccountDelegate: AnyObject {
-    func createAnAccountButtonDidTapped()
-}
-
-protocol SignInButton: AnyObject {
-    func signInButtonDidTapped()
-}
-
 class SignInController: UIViewController {
     
     
     private let singInView = SignInView()
+    
+    let firebaseNetworkData: FirebaseNetworkData = .init()
 
    
     override func loadView() {
@@ -32,6 +26,8 @@ class SignInController: UIViewController {
         view.backgroundColor = .white
         (view as? SignInView)?.createAnAccountDelegate = self
         (view as? SignInView)?.signInButtonDelegate = self
+        (view as? SignInView)?.alertMessageDelegate = self
+        
         
 
        
@@ -41,7 +37,6 @@ class SignInController: UIViewController {
     
 
 }
-
 
 
 
@@ -65,9 +60,27 @@ extension SignInController: SignInButton {
         guard let email = singInView.emailTextField.text else { return }
         guard let password = singInView.passwordTextField.text else { return }
         
-        logInUser(withEmail: email, password: password)
+        firebaseNetworkData.logInUser(withEmail: email, password: password)
+        
+        self.dismiss(animated: true)
     }
     
     
     
 }
+
+
+
+extension SignInController: SignInAlert {
+    
+    func signInAlertMessage(_ userMessage: String) {
+        let alert = UIAlertController(title: "Внимание", message: userMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Понятно", style: .default, handler: nil))
+        present(alert, animated: true)
+        
+    }
+    
+    
+}
+
+

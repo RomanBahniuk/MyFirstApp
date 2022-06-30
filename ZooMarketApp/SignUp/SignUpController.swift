@@ -9,14 +9,13 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-protocol signUpButton: AnyObject {
-    func signUpButtonDidTapped()
-}
-
-class SignUpController: UIViewController {
+final class SignUpController: UIViewController {
 
     
     private let customSignUpView = SignUpView()
+    private let pesonaldataView = PersonalDataView()
+    
+    private let firebaseNetworkData: FirebaseNetworkData = .init()
     
     
     override func loadView() {
@@ -31,31 +30,46 @@ class SignUpController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         (view as? SignUpView)?.signUpButtonDelegate = self
+        (view as? SignUpView)?.signUpAlertDelegate = self
 
     }
     
     @objc private func backBarButton() {
         dismiss(animated: true)
     }
-    
 
 }
 
 
-extension SignUpController: signUpButton {
+extension SignUpController: SignUpButton {
+    
     func signUpButtonDidTapped() {
         
         guard let userName = customSignUpView.userNameTextField.text else { return }
+        guard let userSecondName = customSignUpView.userSecondNameTextField.text else { return }
         guard let email = customSignUpView.userEmailTextField.text else { return }
         guard let password = customSignUpView.userPasswordTextfield.text else { return }
+        guard let userPhoneNumber = pesonaldataView.phoneNumberTextField.text else {return}
+        guard let userDayOfBirth = pesonaldataView.dayOfBirthTextField.text else {return}
         
-        createUser(withUserName: userName, email: email, password: password)
+        firebaseNetworkData.createUser(withUserName: userName, userSecondName: userSecondName, userPhoneNumber: userPhoneNumber, userDayOfBirth: userDayOfBirth, email: email, password: password, userProfileImage: "")
         
-//        let controller = UserProfileController()
-//        let userProfileController = UINavigationController(rootViewController: controller)
-//        userProfileController.modalPresentationStyle = .fullScreen
-//        present(userProfileController, animated: true)
+        self.dismiss(animated: true)
+        
     
+    }
+    
+    
+}
+
+
+
+extension SignUpController: SignUpAlert {
+    func signUpAlertMessage(_ userMessage: String) {
+        
+        let alert = UIAlertController(title: "Внимание", message: userMessage, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Понятно", style: .default, handler: nil))
+        present(alert, animated: true)
     }
     
     
