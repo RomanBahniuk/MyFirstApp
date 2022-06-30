@@ -57,8 +57,7 @@ class PersonalDataController: UIViewController {
 
 extension PersonalDataController: SaveChangesButtonDelegate {
     func buttonDidTapped() {
-     
-        completionHandler?(personalDataView.userImage.image!)
+        
         updateUserData()
         dismiss(animated: true)
     }
@@ -66,7 +65,6 @@ extension PersonalDataController: SaveChangesButtonDelegate {
         
         getUserData()
         getUserPhoto()
-        
         personalDataView.saveChangesButton.setTitleColor(.white, for: .normal)
         personalDataView.saveChangesButton.backgroundColor = .systemIndigo.withAlphaComponent(0.9)
         personalDataView.saveChangesButton.isEnabled = true
@@ -117,9 +115,30 @@ extension PersonalDataController: UIImagePickerControllerDelegate, UINavigationC
         
         if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             self.personalDataView.userImage.image = pickedImage
+            
         }
         
         picker.dismiss(animated: true, completion: nil)
+        
+        let userID = Firebase.Auth.auth().currentUser?.uid
+        uploadUserPhoto(userID: "\(userID!)", userPhoto: personalDataView.userImage.image!) { (result) in
+            switch result {
+
+            case .success(let url):
+                let dataBase = Firestore.firestore()
+                dataBase.collection("FirestoreUsers").document("\(userID!)").setData(["userImageURL": url.absoluteString], merge: true) { (error) in
+                    if let error = error {
+                        print("\(error.localizedDescription)")
+                    }
+                    print("added!")
+                }
+
+            case .failure(let error):
+                print("\(error.localizedDescription)")
+            }
+            self.getUserPhoto()
+            self.completionHandler?(self.personalDataView.userImage.image!)
+        }
     }
     
 }
