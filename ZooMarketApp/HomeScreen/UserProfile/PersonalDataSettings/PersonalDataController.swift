@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseStorage
 
 protocol SaveChangesButtonDelegate: AnyObject {
     func buttonDidTapped()
@@ -58,12 +59,7 @@ extension PersonalDataController: SaveChangesButtonDelegate {
     func buttonDidTapped() {
      
         completionHandler?(personalDataView.userImage.image!)
-        
         updateUserData()
-        
-        
-        
-        
         dismiss(animated: true)
     }
     func  showUserData() {
@@ -74,9 +70,6 @@ extension PersonalDataController: SaveChangesButtonDelegate {
         personalDataView.saveChangesButton.setTitleColor(.white, for: .normal)
         personalDataView.saveChangesButton.backgroundColor = .systemIndigo.withAlphaComponent(0.9)
         personalDataView.saveChangesButton.isEnabled = true
-        
-        
-
         
     }
     
@@ -104,7 +97,14 @@ extension PersonalDataController: UIImagePickerControllerDelegate, UINavigationC
     
     @objc func userImageDidTap(_ gesture: UITapGestureRecognizer) {
         
-        self.present(imagePicker, animated: true, completion: nil)
+        if personalDataView.userImage.image == UIImage(named: "UserProfileImage")  {
+            userEmptyImageAlert()
+        } else {
+            userImageAlert()
+            
+        }
+        
+        
         
     }
     

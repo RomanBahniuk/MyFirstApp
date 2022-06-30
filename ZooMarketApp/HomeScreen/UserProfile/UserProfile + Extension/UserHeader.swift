@@ -17,7 +17,7 @@ class UserHeader: UIView {
         userImage.contentMode = .scaleAspectFill
         userImage.clipsToBounds = true
         userImage.layer.cornerRadius = 36
-        userImage.image = UIImage(named: "ManageAccount")
+        userImage.image = UIImage(named: "UserProfileImage")
         userImage.tintColor = .black
         userImage.isUserInteractionEnabled = true
         

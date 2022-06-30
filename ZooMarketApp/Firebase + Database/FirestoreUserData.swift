@@ -16,6 +16,9 @@ import UIKit
 
 extension PersonalDataController {
     
+    
+    
+    
     func updateUserData() {
         
         
@@ -31,22 +34,22 @@ extension PersonalDataController {
             
         }
         
-        uploadUserPhoto(userID: "\(userID!)", userPhoto: personalDataView.userImage.image!) { (result) in
-            switch result {
-                
-            case .success(let url):
-                let dataBase = Firestore.firestore()
-                dataBase.collection("FirestoreUsers").document("\(userID!)").setData(["userImageURL": url.absoluteString], merge: true) { (error) in
-                    if let error = error {
-                        print("\(error.localizedDescription)")
-                    }
-                    print("added!")
-                }
-                
-            case .failure(let error):
-                print("\(error.localizedDescription)")
-            }
-        }
+//        uploadUserPhoto(userID: "\(userID!)", userPhoto: personalDataView.userImage.image!) { (result) in
+//            switch result {
+//
+//            case .success(let url):
+//                let dataBase = Firestore.firestore()
+//                dataBase.collection("FirestoreUsers").document("\(userID!)").setData(["userImageURL": url.absoluteString], merge: true) { (error) in
+//                    if let error = error {
+//                        print("\(error.localizedDescription)")
+//                    }
+//                    print("added!")
+//                }
+//
+//            case .failure(let error):
+//                print("\(error.localizedDescription)")
+//            }
+//        }
         
         
         
@@ -134,7 +137,7 @@ extension PersonalDataController {
         let userProfilePhoto = storageRef.child("\(userID!)")
         
             userProfilePhoto.getData(maxSize: 1 * 1024 * 1024) { data, err in
-                if let err = err {
+                if let err = err  {
                     print("\(err.localizedDescription)")
                 } else {
                     self.personalDataView.userImage.image = UIImage(data: data!)
@@ -145,9 +148,32 @@ extension PersonalDataController {
         
         
     }
+    
+    
+    func deleteUserPhoto() {
+        
+        let userID = Firebase.Auth.auth().currentUser?.uid
+        let storageRef = Storage.storage().reference(withPath: "UserProfilePhoto")
+        let userProfilePhoto = storageRef.child("\(userID!)")
+        
+        userProfilePhoto.delete { error in
+            if let error = error {
+                
+                print("\(error.localizedDescription)")
             
+            } else {
+                
+                    self.personalDataView.userImage.image = UIImage(named: "UserProfileImage")
+                    print("deleted!")
+                
+                
+            }
+        }
         
-        
+    }
+    
+    
+    
     
     
 }

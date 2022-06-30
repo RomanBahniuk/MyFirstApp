@@ -27,6 +27,7 @@
 		A575B636285800FC00D6114C /* CatalogPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B635285800FC00D6114C /* CatalogPageController.swift */; };
 		A575B63B2858021100D6114C /* ProductCartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B63A2858021100D6114C /* ProductCartPage.swift */; };
 		A57AFE7E286C619E0070D0A4 /* FirebaseNetworkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE7D286C619E0070D0A4 /* FirebaseNetworkData.swift */; };
+		A57AFE80286DD3C80070D0A4 /* PersonalData + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE7F286DD3C80070D0A4 /* PersonalData + Alert.swift */; };
 		A586360E286115E600AF7CE6 /* PersonalDataGesureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */; };
 		A586361128611DC800AF7CE6 /* AppTheme@objcMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586361028611DC800AF7CE6 /* AppTheme@objcMethods.swift */; };
 		A58636132861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58636122861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift */; };
@@ -81,6 +82,7 @@
 		A575B635285800FC00D6114C /* CatalogPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPageController.swift; sourceTree = "<group>"; };
 		A575B63A2858021100D6114C /* ProductCartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartPage.swift; sourceTree = "<group>"; };
 		A57AFE7D286C619E0070D0A4 /* FirebaseNetworkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkData.swift; sourceTree = "<group>"; };
+		A57AFE7F286DD3C80070D0A4 /* PersonalData + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData + Alert.swift"; sourceTree = "<group>"; };
 		A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataGesureSetup.swift; sourceTree = "<group>"; };
 		A586361028611DC800AF7CE6 /* AppTheme@objcMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTheme@objcMethods.swift"; sourceTree = "<group>"; };
 		A58636122861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData + DatePickerSetup.swift"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				A5238619285FBE0600BC0D69 /* PersonalData@objcMethods.swift */,
 				A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */,
 				A58636122861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift */,
+				A57AFE7F286DD3C80070D0A4 /* PersonalData + Alert.swift */,
 			);
 			path = "PersonalDataSttings + Extension";
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				A59D120428570CBB0069DC3E /* @objCMethods.swift in Sources */,
 				A5A77F7F2859C47200AB599F /* SignIn + Protocol.swift in Sources */,
 				A57AFE7E286C619E0070D0A4 /* FirebaseNetworkData.swift in Sources */,
+				A57AFE80286DD3C80070D0A4 /* PersonalData + Alert.swift in Sources */,
 				A59D120628570D620069DC3E /* GestureSetup.swift in Sources */,
 				A5AA87842850FB73008D045B /* SignInController.swift in Sources */,
 				A5AA876F2850FAD2008D045B /* AppDelegate.swift in Sources */,
