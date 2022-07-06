@@ -168,6 +168,8 @@ extension SignUpView: UITextFieldDelegate {
         }
     }
     
+
+    
     
     fileprivate func perfomAnimation() {
         

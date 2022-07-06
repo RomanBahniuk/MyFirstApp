@@ -30,6 +30,10 @@ class PersonalDataView: UIView {
     var saveChangesButtonBottomAnchor: NSLayoutConstraint!
     
     var dataLabelTopAnchor: NSLayoutConstraint!
+    var dataLabelcenterXAnchor: NSLayoutConstraint!
+    
+    var userImagecenterXAnchor: NSLayoutConstraint!
+    var userImageTopAnchor: NSLayoutConstraint!
     
     var firstNameValidType: String.ValidTypes = .userName
     var secondNameValidType: String.ValidTypes = .userSecondName
@@ -62,7 +66,7 @@ class PersonalDataView: UIView {
     
     lazy var dataLabel: UILabel = {
         let dataLabel = UILabel()
-        dataLabel.text = "Ваши данные"
+        dataLabel.text = "Личные данные"
         dataLabel.font = UIFont(name: "Apple SD Gothic Neo Light", size: 32)
         
         
@@ -117,7 +121,6 @@ class PersonalDataView: UIView {
         let secondNameTextField = UITextField()
         secondNameTextField.backgroundColor = .systemGray6
         secondNameTextField.layer.cornerRadius = 16
-        secondNameTextField.text = ""
         
         return secondNameTextField
     }()
@@ -368,23 +371,21 @@ private extension PersonalDataView {
     func dataLabelConstraints() {
         dataLabel.translatesAutoresizingMaskIntoConstraints = false
         dataLabelTopAnchor = dataLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 32)
-        [dataLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 0)].forEach {
-            $0.isActive = true
-            NSLayoutConstraint.activate([dataLabelTopAnchor])
-        }
+        dataLabelcenterXAnchor = dataLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor, constant: 0)
+            NSLayoutConstraint.activate([dataLabelTopAnchor, dataLabelcenterXAnchor])
         
     }
     
     
     func userImageConstraints() {
         userImage.translatesAutoresizingMaskIntoConstraints = false
-        [userImage.topAnchor.constraint(equalTo: dataLabel.bottomAnchor, constant: 16),
-         userImage.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
-         userImage.heightAnchor.constraint(equalToConstant: 80),
+        [userImage.heightAnchor.constraint(equalToConstant: 80),
          userImage.widthAnchor.constraint(equalToConstant: 80)].forEach {
             $0.isActive = true
         }
-        
+        userImageTopAnchor = userImage.topAnchor.constraint(equalTo: dataLabel.bottomAnchor, constant: 16)
+        userImagecenterXAnchor = userImage.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor, constant: 0)
+        NSLayoutConstraint.activate([userImagecenterXAnchor, userImageTopAnchor])
         
     }
     

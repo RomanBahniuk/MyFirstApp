@@ -12,6 +12,9 @@ import FirebaseDatabase
 class SignUpView: UIView {
     
     
+    var firebaseNetworkData: FirebaseNetworkData = .init()
+    
+    
     var userNamePlaceholderCenterYAnchor: NSLayoutConstraint!
     var userNamePlaceholderLeftAnchor: NSLayoutConstraint!
     

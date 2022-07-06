@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		528AFF569071FFA97E02BA9C /* Pods_ZooMarketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */; };
+		A505091C2872A9EC00780F72 /* CatalogPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A505091B2872A9EC00780F72 /* CatalogPageView.swift */; };
+		A505091F2872AB7A00780F72 /* Catalog + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A505091E2872AB7A00780F72 /* Catalog + TableView.swift */; };
 		A5238610285FB50200BC0D69 /* PersonalDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523860F285FB50200BC0D69 /* PersonalDataController.swift */; };
 		A5238612285FB54000BC0D69 /* PersonalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238611285FB54000BC0D69 /* PersonalDataView.swift */; };
 		A5238615285FBC8200BC0D69 /* AppThemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238614285FBC8200BC0D69 /* AppThemeController.swift */; };
@@ -21,6 +23,8 @@
 		A5509ED22857EA0C00A1A8AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5509ED12857EA0C00A1A8AB /* GoogleService-Info.plist */; };
 		A5521933285B04CA0073D3CF /* UserProfileColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5521932285B04CA0073D3CF /* UserProfileColor + Extension.swift */; };
 		A5546D4E28631A5B00AD05D9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5546D4D28631A5B00AD05D9 /* UserModel.swift */; };
+		A56B16122874155600C86BD4 /* CatalogPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56B16112874155600C86BD4 /* CatalogPageCell.swift */; };
+		A56B161628755B8500C86BD4 /* CatalogSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56B161528755B8500C86BD4 /* CatalogSearchController.swift */; };
 		A575B62F2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B62E2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift */; };
 		A575B6322858000E00D6114C /* HomeBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B6312858000E00D6114C /* HomeBarController.swift */; };
 		A575B6342858008B00D6114C /* MainPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B6332858008B00D6114C /* MainPageController.swift */; };
@@ -28,6 +32,10 @@
 		A575B63B2858021100D6114C /* ProductCartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A575B63A2858021100D6114C /* ProductCartPage.swift */; };
 		A57AFE7E286C619E0070D0A4 /* FirebaseNetworkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE7D286C619E0070D0A4 /* FirebaseNetworkData.swift */; };
 		A57AFE80286DD3C80070D0A4 /* PersonalData + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE7F286DD3C80070D0A4 /* PersonalData + Alert.swift */; };
+		A57AFE83286F1E4F0070D0A4 /* AccountManagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE82286F1E4F0070D0A4 /* AccountManagerController.swift */; };
+		A57AFE87286F1EB30070D0A4 /* AccountManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE86286F1EB30070D0A4 /* AccountManagerView.swift */; };
+		A57AFE8A286F234F0070D0A4 /* AccountManager@objCMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE89286F234F0070D0A4 /* AccountManager@objCMethods.swift */; };
+		A57AFE90287064960070D0A4 /* AccountManager + Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57AFE8F287064960070D0A4 /* AccountManager + Alert.swift */; };
 		A586360E286115E600AF7CE6 /* PersonalDataGesureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */; };
 		A586361128611DC800AF7CE6 /* AppTheme@objcMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586361028611DC800AF7CE6 /* AppTheme@objcMethods.swift */; };
 		A58636132861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58636122861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift */; };
@@ -57,12 +65,16 @@
 		A5F094E328587BCD000A5F70 /* UserProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E228587BCD000A5F70 /* UserProfileCell.swift */; };
 		A5F094E628589109000A5F70 /* UserProfileSectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E528589109000A5F70 /* UserProfileSectionsModel.swift */; };
 		A5F094E82858A752000A5F70 /* UserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E72858A752000A5F70 /* UserHeader.swift */; };
+		A5F9D968287390C5007828E5 /* Catalog@objcMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D967287390C5007828E5 /* Catalog@objcMethods.swift */; };
+		A5F9D96A28739144007828E5 /* Catalog + GestureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F9D96928739144007828E5 /* Catalog + GestureSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		007F1A70FE9E44B2C7C84318 /* Pods-ZooMarketApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooMarketApp.debug.xcconfig"; path = "Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1DE9FA7B19D6D883C7BF77C5 /* Pods-ZooMarketApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZooMarketApp.release.xcconfig"; path = "Target Support Files/Pods-ZooMarketApp/Pods-ZooMarketApp.release.xcconfig"; sourceTree = "<group>"; };
 		894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooMarketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A505091B2872A9EC00780F72 /* CatalogPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPageView.swift; sourceTree = "<group>"; };
+		A505091E2872AB7A00780F72 /* Catalog + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Catalog + TableView.swift"; sourceTree = "<group>"; };
 		A523860F285FB50200BC0D69 /* PersonalDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataController.swift; sourceTree = "<group>"; };
 		A5238611285FB54000BC0D69 /* PersonalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataView.swift; sourceTree = "<group>"; };
 		A5238614285FBC8200BC0D69 /* AppThemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeController.swift; sourceTree = "<group>"; };
@@ -76,6 +88,8 @@
 		A5509ED12857EA0C00A1A8AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5521932285B04CA0073D3CF /* UserProfileColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfileColor + Extension.swift"; sourceTree = "<group>"; };
 		A5546D4D28631A5B00AD05D9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A56B16112874155600C86BD4 /* CatalogPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPageCell.swift; sourceTree = "<group>"; };
+		A56B161528755B8500C86BD4 /* CatalogSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogSearchController.swift; sourceTree = "<group>"; };
 		A575B62E2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserProfile + FirebaseAuth.swift"; sourceTree = "<group>"; };
 		A575B6312858000E00D6114C /* HomeBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBarController.swift; sourceTree = "<group>"; };
 		A575B6332858008B00D6114C /* MainPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageController.swift; sourceTree = "<group>"; };
@@ -83,6 +97,10 @@
 		A575B63A2858021100D6114C /* ProductCartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartPage.swift; sourceTree = "<group>"; };
 		A57AFE7D286C619E0070D0A4 /* FirebaseNetworkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseNetworkData.swift; sourceTree = "<group>"; };
 		A57AFE7F286DD3C80070D0A4 /* PersonalData + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData + Alert.swift"; sourceTree = "<group>"; };
+		A57AFE82286F1E4F0070D0A4 /* AccountManagerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerController.swift; sourceTree = "<group>"; };
+		A57AFE86286F1EB30070D0A4 /* AccountManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagerView.swift; sourceTree = "<group>"; };
+		A57AFE89286F234F0070D0A4 /* AccountManager@objCMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountManager@objCMethods.swift"; sourceTree = "<group>"; };
+		A57AFE8F287064960070D0A4 /* AccountManager + Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountManager + Alert.swift"; sourceTree = "<group>"; };
 		A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataGesureSetup.swift; sourceTree = "<group>"; };
 		A586361028611DC800AF7CE6 /* AppTheme@objcMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTheme@objcMethods.swift"; sourceTree = "<group>"; };
 		A58636122861729D00AF7CE6 /* PersonalData + DatePickerSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData + DatePickerSetup.swift"; sourceTree = "<group>"; };
@@ -114,6 +132,8 @@
 		A5F094E228587BCD000A5F70 /* UserProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileCell.swift; sourceTree = "<group>"; };
 		A5F094E528589109000A5F70 /* UserProfileSectionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSectionsModel.swift; sourceTree = "<group>"; };
 		A5F094E72858A752000A5F70 /* UserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeader.swift; sourceTree = "<group>"; };
+		A5F9D967287390C5007828E5 /* Catalog@objcMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Catalog@objcMethods.swift"; sourceTree = "<group>"; };
+		A5F9D96928739144007828E5 /* Catalog + GestureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Catalog + GestureSetup.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +148,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A505091D2872AB5500780F72 /* Catalog + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A505091E2872AB7A00780F72 /* Catalog + TableView.swift */,
+				A5F9D967287390C5007828E5 /* Catalog@objcMethods.swift */,
+				A5F9D96928739144007828E5 /* Catalog + GestureSetup.swift */,
+			);
+			path = "Catalog + Extension";
+			sourceTree = "<group>";
+		};
 		A523860E285FB49500BC0D69 /* PersonalDataSettings */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +204,7 @@
 		A5509EC92857D06800A1A8AB /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				A57AFE81286F1DBE0070D0A4 /* AccountManager */,
 				A5238613285FBC5C00BC0D69 /* AppTheme */,
 				A523860E285FB49500BC0D69 /* PersonalDataSettings */,
 				A5AA87722850FAD2008D045B /* UserProfileController.swift */,
@@ -220,7 +251,11 @@
 		A575B6382858011900D6114C /* Catalog */ = {
 			isa = PBXGroup;
 			children = (
+				A56B161528755B8500C86BD4 /* CatalogSearchController.swift */,
 				A575B635285800FC00D6114C /* CatalogPageController.swift */,
+				A505091B2872A9EC00780F72 /* CatalogPageView.swift */,
+				A56B16112874155600C86BD4 /* CatalogPageCell.swift */,
+				A505091D2872AB5500780F72 /* Catalog + Extension */,
 			);
 			path = Catalog;
 			sourceTree = "<group>";
@@ -231,6 +266,25 @@
 				A575B63A2858021100D6114C /* ProductCartPage.swift */,
 			);
 			path = ProductCart;
+			sourceTree = "<group>";
+		};
+		A57AFE81286F1DBE0070D0A4 /* AccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				A57AFE82286F1E4F0070D0A4 /* AccountManagerController.swift */,
+				A57AFE86286F1EB30070D0A4 /* AccountManagerView.swift */,
+				A57AFE88286F1F440070D0A4 /* AccountManager + Extension */,
+			);
+			path = AccountManager;
+			sourceTree = "<group>";
+		};
+		A57AFE88286F1F440070D0A4 /* AccountManager + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A57AFE89286F234F0070D0A4 /* AccountManager@objCMethods.swift */,
+				A57AFE8F287064960070D0A4 /* AccountManager + Alert.swift */,
+			);
+			path = "AccountManager + Extension";
 			sourceTree = "<group>";
 		};
 		A586360F28611D3600AF7CE6 /* AppTheme + Extension */ = {
@@ -466,28 +520,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5AA87892854EB37008D045B /* SignUpController.swift in Sources */,
+				A56B161628755B8500C86BD4 /* CatalogSearchController.swift in Sources */,
 				A5F094E128586680000A5F70 /* TableView + Delegate.swift in Sources */,
 				A5238610285FB50200BC0D69 /* PersonalDataController.swift in Sources */,
 				A59D120228570B850069DC3E /* TextFieldSetup.swift in Sources */,
 				A5AA87732850FAD2008D045B /* UserProfileController.swift in Sources */,
 				A575B6342858008B00D6114C /* MainPageController.swift in Sources */,
+				A57AFE87286F1EB30070D0A4 /* AccountManagerView.swift in Sources */,
 				A59D120D285710830069DC3E /* SignUp@objCMethods.swift in Sources */,
+				A57AFE8A286F234F0070D0A4 /* AccountManager@objCMethods.swift in Sources */,
 				A59D120428570CBB0069DC3E /* @objCMethods.swift in Sources */,
 				A5A77F7F2859C47200AB599F /* SignIn + Protocol.swift in Sources */,
 				A57AFE7E286C619E0070D0A4 /* FirebaseNetworkData.swift in Sources */,
 				A57AFE80286DD3C80070D0A4 /* PersonalData + Alert.swift in Sources */,
 				A59D120628570D620069DC3E /* GestureSetup.swift in Sources */,
 				A5AA87842850FB73008D045B /* SignInController.swift in Sources */,
+				A505091C2872A9EC00780F72 /* CatalogPageView.swift in Sources */,
 				A5AA876F2850FAD2008D045B /* AppDelegate.swift in Sources */,
 				A575B62F2857F2DD00D6114C /* UserProfile + FirebaseAuth.swift in Sources */,
 				A575B636285800FC00D6114C /* CatalogPageController.swift in Sources */,
+				A57AFE90287064960070D0A4 /* AccountManager + Alert.swift in Sources */,
 				A5238617285FBCB800BC0D69 /* AppThemeView.swift in Sources */,
 				A59D120828570E4D0069DC3E /* String + Extension.swift in Sources */,
 				A59D120F285710F30069DC3E /* SignUpGestureSetup.swift in Sources */,
+				A505091F2872AB7A00780F72 /* Catalog + TableView.swift in Sources */,
 				A5A77F812859D27200AB599F /* SignUp + Protocol.swift in Sources */,
 				A5509ECB2857D0C200A1A8AB /* UserProfileView.swift in Sources */,
 				A535E477286083E600D95564 /* PersonalData + TextFieldSetup.swift in Sources */,
 				A52ABB46285A58F60089A832 /* UIColor + Extension.swift in Sources */,
+				A56B16122874155600C86BD4 /* CatalogPageCell.swift in Sources */,
+				A5F9D968287390C5007828E5 /* Catalog@objcMethods.swift in Sources */,
 				A5F094DF28585FD3000A5F70 /* TabBar + FirebaseAuth.swift in Sources */,
 				A5238615285FBC8200BC0D69 /* AppThemeController.swift in Sources */,
 				A5AA87862850FBB2008D045B /* SignInView.swift in Sources */,
@@ -504,9 +566,11 @@
 				A575B63B2858021100D6114C /* ProductCartPage.swift in Sources */,
 				A5546D4E28631A5B00AD05D9 /* UserModel.swift in Sources */,
 				A5AA878B2854EBA2008D045B /* SignUpView.swift in Sources */,
+				A57AFE83286F1E4F0070D0A4 /* AccountManagerController.swift in Sources */,
 				A586361128611DC800AF7CE6 /* AppTheme@objcMethods.swift in Sources */,
 				A5238612285FB54000BC0D69 /* PersonalDataView.swift in Sources */,
 				A5AA87712850FAD2008D045B /* SceneDelegate.swift in Sources */,
+				A5F9D96A28739144007828E5 /* Catalog + GestureSetup.swift in Sources */,
 				A5509ECE2857D62700A1A8AB /* @objcMethods.swift in Sources */,
 				A5F094E82858A752000A5F70 /* UserHeader.swift in Sources */,
 			);

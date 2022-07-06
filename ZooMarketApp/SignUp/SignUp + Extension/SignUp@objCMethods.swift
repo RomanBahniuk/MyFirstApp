@@ -103,9 +103,15 @@ extension SignUpView {
             signUpAlertDelegate?.signUpAlertMessage("Введите адрес электронной почты")
         } else if (userPassword!.isEmpty) {
             signUpAlertDelegate?.signUpAlertMessage("Введите пароль")
-        } else {
-            signUpButtonDelegate?.signUpButtonDidTapped()
-
+        } else if !userEmail!.isEmpty {
+            firebaseNetworkData.chekUserEmail(emailText: userEmail!) { isEmailExist in
+                if isEmailExist == true {
+                    self.signUpAlertDelegate?.signUpAlertMessage("Данный Email уже используется")
+                    
+                } else {
+                    self.signUpButtonDelegate?.signUpButtonDidTapped()
+                }
+            }
         }
         
         
@@ -113,6 +119,9 @@ extension SignUpView {
         
         
         
+        
+        
     }
+    
     
 }

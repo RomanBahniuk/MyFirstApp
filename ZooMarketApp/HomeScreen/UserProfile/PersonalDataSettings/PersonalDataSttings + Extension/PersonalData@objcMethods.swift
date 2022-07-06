@@ -46,17 +46,22 @@ extension PersonalDataView {
     }
     
     
-    @objc func keyboardWillShow() {
-                
+    @objc func keyboardWillShow(_ notification: Notification) {
+        
+        
         if isKeyboardMoves == true {
             
             
-            dataLabelTopAnchor.constant = -32
+            dataLabelcenterXAnchor.constant = 16
+            userImagecenterXAnchor.constant = -144
+            userImageTopAnchor.constant = -64
+           
+            
             saveChangesButtonBottomAnchor.constant = -320
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
                 
                 
-                self.layoutIfNeeded()
+                self.layoutIfNeeded()          
                 
             })
             
@@ -68,7 +73,10 @@ extension PersonalDataView {
         
         if isKeyboardMoves == true {
             
-            dataLabelTopAnchor.constant = 32
+            userImagecenterXAnchor.constant = 0
+            dataLabelcenterXAnchor.constant = 0
+            userImageTopAnchor.constant = 16
+            
             saveChangesButtonBottomAnchor.constant = -32
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveLinear, animations: {
                 

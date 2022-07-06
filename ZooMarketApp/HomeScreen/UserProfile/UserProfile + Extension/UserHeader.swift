@@ -120,7 +120,7 @@ private extension UserHeader {
     
     func userEmailConstraints() {
         userEmail.translatesAutoresizingMaskIntoConstraints = false
-        [userEmail.topAnchor.constraint(equalTo: userFirstName.bottomAnchor, constant: 8),
+        [userEmail.topAnchor.constraint(equalTo: userFirstName.bottomAnchor, constant: 0),
          userEmail.leftAnchor.constraint(equalTo: userImage.rightAnchor, constant: 16)].forEach {
             $0.isActive = true
         }

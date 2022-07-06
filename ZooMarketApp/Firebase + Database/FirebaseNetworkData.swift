@@ -15,6 +15,12 @@ import FirebaseFirestore
 final class FirebaseNetworkData {
     
     private let firestore = Firestore.firestore()
+    private let userID = Firebase.Auth.auth().currentUser?.uid
+    
+    
+    weak var alertDelegate: WrongUserDataAlert?
+    
+    
     
     func createUser(withUserName userName: String, userSecondName: String, userPhoneNumber: String, userDayOfBirth: String, email: String, password: String, userProfileImage: String) {
         
@@ -27,9 +33,9 @@ final class FirebaseNetworkData {
             }
             
             guard let userID = result?.user.uid else { return }
-
             
-            Firestore.firestore().collection("FirestoreUsers").document("\(userID)").setData(["email": email, "userPhoneNumber": userPhoneNumber,"userName": userName, "userSecondName": userSecondName, "userDayOfBirth": userDayOfBirth, "userID": userID, "userProfileImage": userProfileImage]) {
+            
+            Firestore.firestore().collection("FirestoreUsers").document("\(userID)").setData(["userEmail": email, "userPhoneNumber": userPhoneNumber,"userName": userName, "userSecondName": userSecondName, "userDayOfBirth": userDayOfBirth, "userID": userID, "userProfileImage": userProfileImage]) {
                 err in
                 if let err = err {
                     print("error!:\(err.localizedDescription)")
@@ -38,23 +44,106 @@ final class FirebaseNetworkData {
                 }
                 
             }
-                
-
+            
+            
             
         }
     }
     
     
-    func logInUser(withEmail email:String, password: String) {
+    func chekUserEmail(emailText: String, completion: @escaping (Bool) -> ()) {
+        
+        let database = Firestore.firestore().collection("FirestoreUsers")
+        database.whereField("userEmail", isEqualTo: emailText).getDocuments { (snap, err) in
+            if let err = err {
+                print("\(err.localizedDescription)")
+            } else if (snap?.isEmpty)! {
+                completion(false)
+            } else {
+                for i in (snap?.documents)! {
+                    if i.data()["userEmail"] != nil {
+                        completion(true)
+                    }
+                }
+            }
+        }
+        
+    }
+    
+    
+    
+    func logInUser(withEmail email:String, password: String, completion: @escaping (Bool) -> ()) {
         
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             
             if let error = error {
-                print("error to signIn User", error.localizedDescription)
+                let error = error as NSError
+                switch error.code {
+                case AuthErrorCode.userNotFound.rawValue:
+                    self.alertDelegate?.WrongUserDataAlert("Неверный электронный адрес или пароль")
+                case AuthErrorCode.wrongPassword.rawValue:
+                    self.alertDelegate?.WrongUserDataAlert("Неверный пароль")
+                default: print("error to signIn User", error.localizedDescription)
+                    completion(false)
+                    }
                 return
-            }
+            } else {
+                completion(true)
+                }
         }
     }
-
-
+    
+    
+    func authenticateUser(completion: @escaping (Bool) -> ()) {
+        
+        if Auth.auth().currentUser == nil {
+            completion(true)
+        } else {
+            completion(false)
+        }
+    }
+    
+    
+    func signOut() {
+        
+        do {
+            try Auth.auth().signOut()
+            
+        } catch let error {
+            print("Sign out is failed!", error)
+        }
+    }
+    
+    
+    func deleteUserAccount() {
+        
+        let currentUser = Firebase.Auth.auth().currentUser
+        let userID = currentUser?.uid
+        let database = Firestore.firestore().collection("FirestoreUsers").document("\(userID!)")
+        let storageRef = Storage.storage().reference(withPath: "UserProfilePhoto").child("\(userID!)")
+        
+        currentUser?.delete(completion: { error in
+            if let error = error {
+                
+                print("\(error.localizedDescription)")
+                
+            } else {
+                database.delete { err in
+                    if let err = err {
+                        print("\(err.localizedDescription)")
+                    }
+                    
+                }
+                
+                storageRef.delete { err in
+                    if let err = err {
+                        print("Failed to delete userPhoto\(err.localizedDescription)")
+                    }
+                }
+            }
+        })
+        
+    }
+    
+    
 }

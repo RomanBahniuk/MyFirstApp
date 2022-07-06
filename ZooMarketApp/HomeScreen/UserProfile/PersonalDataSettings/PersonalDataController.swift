@@ -23,6 +23,7 @@ class PersonalDataController: UIViewController {
     
     public var completionHandler: ((UIImage) -> Void)?
     
+    
     var header: UserHeader!
     var dataBase: Firestore!
     var imagePicker: UIImagePickerController!
@@ -45,6 +46,7 @@ class PersonalDataController: UIViewController {
         dataBase = Firestore.firestore()
         
         (view as? PersonalDataView)?.firestoreDelegate = self
+        
         showUserData()
     }
     

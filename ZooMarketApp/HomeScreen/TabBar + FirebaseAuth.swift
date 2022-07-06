@@ -14,15 +14,14 @@ extension HomeBarController {
     
     func authenticateUser() {
         
-        if Auth.auth().currentUser == nil {
-            DispatchQueue.main.async {
-                
-                let signInViewController = UINavigationController(rootViewController: SignInController())
-                signInViewController.modalPresentationStyle = .fullScreen
-                self.present(signInViewController, animated: true)
+        firebaseNetworkData.authenticateUser { isUserAuthentificate in
+            if isUserAuthentificate == true {
+                DispatchQueue.main.async {
+                    let signInViewController = UINavigationController(rootViewController: SignInController())
+                    signInViewController.modalPresentationStyle = .fullScreen
+                    self.present(signInViewController, animated: true)
+                }
             }
-        } else {
-           
         }
     }
 }

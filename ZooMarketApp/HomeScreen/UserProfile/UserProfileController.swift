@@ -18,9 +18,13 @@ protocol AppThemeCellDelegate: AnyObject {
     func appThemeCellTapped()
 }
 
+protocol AccountManagerCellDelegate: AnyObject {
+    func accountManagerCellTapped()
+}
+
 class UserProfileController: UIViewController {
     
-    var tableViewSettings = [SettingsData(settingName: "Личные данные"),SettingsData(settingName: "Цвета приложения"), SettingsData(settingName: "Выйти из аккаунта")]
+    var tableViewSettings = [SettingsData(settingName: "Личные данные"),SettingsData(settingName: "Цвета приложения"), SettingsData(settingName: "Управление аккаунтом")]
     
 
     let firebaseNetworkData: FirebaseNetworkData = .init()
@@ -46,6 +50,8 @@ class UserProfileController: UIViewController {
         
         loadUserData()
         configureNavBar()
+        
+        
         
     }
 
@@ -138,6 +144,20 @@ extension UserProfileController: AppThemeCellDelegate {
         let appThemeController = UINavigationController(rootViewController: controller)
         appThemeController.modalPresentationStyle = .fullScreen
         present(appThemeController, animated: true)
+    }
+    
+    
+}
+
+extension UserProfileController: AccountManagerCellDelegate {
+    func accountManagerCellTapped() {
+        let controller = AccountManagerController()
+        let accountManagerController = UINavigationController(rootViewController: controller)
+        accountManagerController.modalPresentationStyle = .fullScreen
+        present(accountManagerController, animated: true)
+        
+        
+        
     }
     
     

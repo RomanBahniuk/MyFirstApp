@@ -7,7 +7,8 @@
 
 import Foundation
 import UIKit
-
+import Firebase
+import FirebaseFirestore
 
 extension SignInView {
     

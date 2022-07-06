@@ -37,9 +37,9 @@ extension UserProfileController: UITableViewDelegate, UITableViewDataSource, UIS
         
         cell?.update(settingsName: tableViewSettings[indexPath.row])
         
-        if indexPath.row == 2 {
-            cell?.settingLabel.textColor = .systemRed
-        }
+//        if indexPath.row == 2 {
+//            cell?.settingLabel.textColor = .systemRed
+//        }
         
         return cell!
         
@@ -55,8 +55,8 @@ extension UserProfileController: UITableViewDelegate, UITableViewDataSource, UIS
         case 1:
             appThemeCellTapped()
         case 2:
-            signOutAlert()
-
+            accountManagerCellTapped()
+            
             
         default: break
             

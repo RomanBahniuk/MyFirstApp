@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseFirestore
 
 final class SignUpController: UIViewController {
 
@@ -37,7 +38,7 @@ final class SignUpController: UIViewController {
     @objc private func backBarButton() {
         dismiss(animated: true)
     }
-
+    
 }
 
 
@@ -51,8 +52,16 @@ extension SignUpController: SignUpButton {
         guard let password = customSignUpView.userPasswordTextfield.text else { return }
         guard let userPhoneNumber = pesonaldataView.phoneNumberTextField.text else {return}
         guard let userDayOfBirth = pesonaldataView.dayOfBirthTextField.text else {return}
-        
+
         firebaseNetworkData.createUser(withUserName: userName, userSecondName: userSecondName, userPhoneNumber: userPhoneNumber, userDayOfBirth: userDayOfBirth, email: email, password: password, userProfileImage: "")
+        
+        firebaseNetworkData.chekUserEmail(emailText: customSignUpView.userEmailTextField.text!) { (success) in
+            if success == true {
+                print("email exist!")
+            } else {
+                print("email is free!")
+            }
+        }
         
         self.dismiss(animated: true)
         
@@ -74,3 +83,23 @@ extension SignUpController: SignUpAlert {
     
     
 }
+
+
+
+extension SignUpController {
+    
+    
+}
+
+
+
+
+
+        
+                        
+                
+                
+            
+    
+    
+

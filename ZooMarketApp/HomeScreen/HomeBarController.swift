@@ -11,12 +11,16 @@ import FirebaseDatabase
 
 class HomeBarController: UITabBarController {
     
+    
+    let firebaseNetworkData: FirebaseNetworkData = .init()
+    
     override func loadView() {
         super.loadView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setTabBarControllers()
         authenticateUser()
         setTapBar()

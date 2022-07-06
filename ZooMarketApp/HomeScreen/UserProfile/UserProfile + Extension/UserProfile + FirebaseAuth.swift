@@ -44,7 +44,7 @@ extension UserProfileController {
                 
                 let userName = i.document.get("userName") as! String
                 let userSecondName = i.document.get("userSecondName") as! String
-                let email = i.document.get("email") as! String
+                let email = i.document.get("userEmail") as! String
                 DispatchQueue.main.async {
                     self.userHeader.userFirstName.text = "\(userName)"
                     self.userHeader.userSecondName.text = "\(userSecondName)"
@@ -61,27 +61,4 @@ extension UserProfileController {
 
         }
     
-    
-    
-    
-    
-    
-    
-    func signOut() {
-        
-        do {
-            try Auth.auth().signOut()
-            
-            let signInViewController = UINavigationController(rootViewController: SignInController())
-            signInViewController.modalPresentationStyle = .fullScreen
-            self.present(signInViewController, animated: true)
-        } catch let error {
-            print("Sign out is failed!", error)
-        }
-    }
-    
-    
-
-
-
 }

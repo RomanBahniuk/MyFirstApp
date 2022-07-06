@@ -27,7 +27,7 @@ extension String {
         case userSecondName = "[а-яА-я]{1,19}"
         case email = "[a-zA-z0-9._]+@[a-zA-z]+\\.[a-zA-Z]{2,3}"
         case password = "(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{6,}"
-        
+       
         
     }
     
