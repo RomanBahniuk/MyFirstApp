@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import CoreData
 
 
 protocol PersonalDataCellDelegate: AnyObject {
@@ -29,11 +30,19 @@ class UserProfileController: UIViewController {
 
     let firebaseNetworkData: FirebaseNetworkData = .init()
     
+    let coreDatabase: CoreDatabase = .init()
+    
     let userProfileView = UserProfileView()
     var userHeader: UserHeader!
     
     
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadUserData()
+    }
     
     
     override func loadView() {
@@ -48,9 +57,7 @@ class UserProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadUserData()
         configureNavBar()
-        
         
         
     }
@@ -99,16 +106,9 @@ extension UserProfileController {
         userProfileView.tableView.rowHeight = 56
         userProfileView.tableView.register(UserProfileCell.self, forCellReuseIdentifier: "UserProfileCell")
         
-        
-        
-        
-        
         let frame = CGRect(x: 0, y: 88, width: view.frame.width, height: 152)
         userHeader = UserHeader(frame: frame)
         userProfileView.tableView.tableHeaderView = userHeader
-        
-        
-        
         
     }
     
@@ -155,8 +155,6 @@ extension UserProfileController: AccountManagerCellDelegate {
         let accountManagerController = UINavigationController(rootViewController: controller)
         accountManagerController.modalPresentationStyle = .fullScreen
         present(accountManagerController, animated: true)
-        
-        
         
     }
     

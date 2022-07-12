@@ -37,10 +37,6 @@ extension UserProfileController: UITableViewDelegate, UITableViewDataSource, UIS
         
         cell?.update(settingsName: tableViewSettings[indexPath.row])
         
-//        if indexPath.row == 2 {
-//            cell?.settingLabel.textColor = .systemRed
-//        }
-        
         return cell!
         
         

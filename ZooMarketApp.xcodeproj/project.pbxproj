@@ -10,11 +10,13 @@
 		528AFF569071FFA97E02BA9C /* Pods_ZooMarketApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */; };
 		A505091C2872A9EC00780F72 /* CatalogPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A505091B2872A9EC00780F72 /* CatalogPageView.swift */; };
 		A505091F2872AB7A00780F72 /* Catalog + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A505091E2872AB7A00780F72 /* Catalog + TableView.swift */; };
+		A5051E85287CC0E300749E93 /* PersonalData + FirestoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5051E84287CC0E300749E93 /* PersonalData + FirestoreData.swift */; };
 		A5238610285FB50200BC0D69 /* PersonalDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523860F285FB50200BC0D69 /* PersonalDataController.swift */; };
 		A5238612285FB54000BC0D69 /* PersonalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238611285FB54000BC0D69 /* PersonalDataView.swift */; };
 		A5238615285FBC8200BC0D69 /* AppThemeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238614285FBC8200BC0D69 /* AppThemeController.swift */; };
 		A5238617285FBCB800BC0D69 /* AppThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238616285FBCB800BC0D69 /* AppThemeView.swift */; };
 		A523861A285FBE0600BC0D69 /* PersonalData@objcMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5238619285FBE0600BC0D69 /* PersonalData@objcMethods.swift */; };
+		A529EFFE2877804E002F0DF9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A529EFFD2877804E002F0DF9 /* CoreData.framework */; };
 		A52ABB46285A58F60089A832 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52ABB45285A58F60089A832 /* UIColor + Extension.swift */; };
 		A535E477286083E600D95564 /* PersonalData + TextFieldSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535E476286083E600D95564 /* PersonalData + TextFieldSetup.swift */; };
 		A547D74B28624BF30080B180 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547D74A28624BF30080B180 /* UserDatabase.swift */; };
@@ -47,6 +49,7 @@
 		A59D120B28570FE10069DC3E /* AuthTextFieldSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120A28570FE10069DC3E /* AuthTextFieldSetup.swift */; };
 		A59D120D285710830069DC3E /* SignUp@objCMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120C285710830069DC3E /* SignUp@objCMethods.swift */; };
 		A59D120F285710F30069DC3E /* SignUpGestureSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59D120E285710F30069DC3E /* SignUpGestureSetup.swift */; };
+		A5A03710287AA52D004DAFC4 /* ZooMarketApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5A0370D287AA52D004DAFC4 /* ZooMarketApp.xcdatamodeld */; };
 		A5A77F7F2859C47200AB599F /* SignIn + Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A77F7E2859C47200AB599F /* SignIn + Protocol.swift */; };
 		A5A77F812859D27200AB599F /* SignUp + Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A77F802859D27200AB599F /* SignUp + Protocol.swift */; };
 		A5AA876F2850FAD2008D045B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA876E2850FAD2008D045B /* AppDelegate.swift */; };
@@ -59,6 +62,7 @@
 		A5AA87862850FBB2008D045B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87852850FBB2008D045B /* SignInView.swift */; };
 		A5AA87892854EB37008D045B /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA87882854EB37008D045B /* SignUpController.swift */; };
 		A5AA878B2854EBA2008D045B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AA878A2854EBA2008D045B /* SignUpView.swift */; };
+		A5AAFD4A2879C87A000236F3 /* CoreDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAFD492879C87A000236F3 /* CoreDatabase.swift */; };
 		A5B38B6B285E5BC800CFBF88 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5B38B6A285E5BC800CFBF88 /* credentials.plist */; };
 		A5F094DF28585FD3000A5F70 /* TabBar + FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094DE28585FD3000A5F70 /* TabBar + FirebaseAuth.swift */; };
 		A5F094E128586680000A5F70 /* TableView + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F094E028586680000A5F70 /* TableView + Delegate.swift */; };
@@ -75,11 +79,14 @@
 		894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZooMarketApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A505091B2872A9EC00780F72 /* CatalogPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPageView.swift; sourceTree = "<group>"; };
 		A505091E2872AB7A00780F72 /* Catalog + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Catalog + TableView.swift"; sourceTree = "<group>"; };
+		A5051E84287CC0E300749E93 /* PersonalData + FirestoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData + FirestoreData.swift"; sourceTree = "<group>"; };
 		A523860F285FB50200BC0D69 /* PersonalDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataController.swift; sourceTree = "<group>"; };
 		A5238611285FB54000BC0D69 /* PersonalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataView.swift; sourceTree = "<group>"; };
 		A5238614285FBC8200BC0D69 /* AppThemeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeController.swift; sourceTree = "<group>"; };
 		A5238616285FBCB800BC0D69 /* AppThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeView.swift; sourceTree = "<group>"; };
 		A5238619285FBE0600BC0D69 /* PersonalData@objcMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData@objcMethods.swift"; sourceTree = "<group>"; };
+		A529EFFD2877804E002F0DF9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A529EFFF2877805A002F0DF9 /* libswiftCoreData.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftCoreData.tbd; path = usr/lib/swift/libswiftCoreData.tbd; sourceTree = SDKROOT; };
 		A52ABB45285A58F60089A832 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		A535E476286083E600D95564 /* PersonalData + TextFieldSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalData + TextFieldSetup.swift"; sourceTree = "<group>"; };
 		A547D74A28624BF30080B180 /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
@@ -112,6 +119,8 @@
 		A59D120A28570FE10069DC3E /* AuthTextFieldSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextFieldSetup.swift; sourceTree = "<group>"; };
 		A59D120C285710830069DC3E /* SignUp@objCMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp@objCMethods.swift"; sourceTree = "<group>"; };
 		A59D120E285710F30069DC3E /* SignUpGestureSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpGestureSetup.swift; sourceTree = "<group>"; };
+		A5A0370E287AA52D004DAFC4 /* ZooMarketApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZooMarketApp.xcdatamodel; sourceTree = "<group>"; };
+		A5A0370F287AA52D004DAFC4 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A5A77F7E2859C47200AB599F /* SignIn + Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignIn + Protocol.swift"; sourceTree = "<group>"; };
 		A5A77F802859D27200AB599F /* SignUp + Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUp + Protocol.swift"; sourceTree = "<group>"; };
 		A5AA876B2850FAD2008D045B /* ZooMarketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooMarketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +135,7 @@
 		A5AA87852850FBB2008D045B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		A5AA87882854EB37008D045B /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		A5AA878A2854EBA2008D045B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A5AAFD492879C87A000236F3 /* CoreDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatabase.swift; sourceTree = "<group>"; };
 		A5B38B6A285E5BC800CFBF88 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		A5F094DE28585FD3000A5F70 /* TabBar + FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TabBar + FirebaseAuth.swift"; sourceTree = "<group>"; };
 		A5F094E028586680000A5F70 /* TableView + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView + Delegate.swift"; sourceTree = "<group>"; };
@@ -142,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				528AFF569071FFA97E02BA9C /* Pods_ZooMarketApp.framework in Frameworks */,
+				A529EFFE2877804E002F0DF9 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +192,7 @@
 		A5238618285FBDD200BC0D69 /* PersonalDataSttings + Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A5051E84287CC0E300749E93 /* PersonalData + FirestoreData.swift */,
 				A535E476286083E600D95564 /* PersonalData + TextFieldSetup.swift */,
 				A5238619285FBE0600BC0D69 /* PersonalData@objcMethods.swift */,
 				A586360D286115E600AF7CE6 /* PersonalDataGesureSetup.swift */,
@@ -338,6 +350,7 @@
 		A5AA876D2850FAD2008D045B /* ZooMarketApp */ = {
 			isa = PBXGroup;
 			children = (
+				A5C2872828797019007C01DA /* CoreData */,
 				A547D74928624B9D0080B180 /* Firebase + Database */,
 				A5F094E4285890DB000A5F70 /* Model */,
 				A575B6302857FFA700D6114C /* HomeScreen */,
@@ -376,6 +389,15 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		A5C2872828797019007C01DA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A5AAFD492879C87A000236F3 /* CoreDatabase.swift */,
+				A5A0370D287AA52D004DAFC4 /* ZooMarketApp.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		A5F094E4285890DB000A5F70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +419,8 @@
 		F938EE69A5C16117547FAEFF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A529EFFF2877805A002F0DF9 /* libswiftCoreData.tbd */,
+				A529EFFD2877804E002F0DF9 /* CoreData.framework */,
 				894670AE0E2018B7770FF2B4 /* Pods_ZooMarketApp.framework */,
 			);
 			name = Frameworks;
@@ -541,6 +565,7 @@
 				A575B636285800FC00D6114C /* CatalogPageController.swift in Sources */,
 				A57AFE90287064960070D0A4 /* AccountManager + Alert.swift in Sources */,
 				A5238617285FBCB800BC0D69 /* AppThemeView.swift in Sources */,
+				A5A03710287AA52D004DAFC4 /* ZooMarketApp.xcdatamodeld in Sources */,
 				A59D120828570E4D0069DC3E /* String + Extension.swift in Sources */,
 				A59D120F285710F30069DC3E /* SignUpGestureSetup.swift in Sources */,
 				A505091F2872AB7A00780F72 /* Catalog + TableView.swift in Sources */,
@@ -553,6 +578,7 @@
 				A5F094DF28585FD3000A5F70 /* TabBar + FirebaseAuth.swift in Sources */,
 				A5238615285FBC8200BC0D69 /* AppThemeController.swift in Sources */,
 				A5AA87862850FBB2008D045B /* SignInView.swift in Sources */,
+				A5AAFD4A2879C87A000236F3 /* CoreDatabase.swift in Sources */,
 				A59D120B28570FE10069DC3E /* AuthTextFieldSetup.swift in Sources */,
 				A5F094E328587BCD000A5F70 /* UserProfileCell.swift in Sources */,
 				A575B6322858000E00D6114C /* HomeBarController.swift in Sources */,
@@ -571,6 +597,7 @@
 				A5238612285FB54000BC0D69 /* PersonalDataView.swift in Sources */,
 				A5AA87712850FAD2008D045B /* SceneDelegate.swift in Sources */,
 				A5F9D96A28739144007828E5 /* Catalog + GestureSetup.swift in Sources */,
+				A5051E85287CC0E300749E93 /* PersonalData + FirestoreData.swift in Sources */,
 				A5509ECE2857D62700A1A8AB /* @objcMethods.swift in Sources */,
 				A5F094E82858A752000A5F70 /* UserHeader.swift in Sources */,
 			);
@@ -792,6 +819,22 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A5A0370D287AA52D004DAFC4 /* ZooMarketApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A5A0370E287AA52D004DAFC4 /* ZooMarketApp.xcdatamodel */,
+				A5A0370F287AA52D004DAFC4 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = A5A0370E287AA52D004DAFC4 /* ZooMarketApp.xcdatamodel */;
+			path = ZooMarketApp.xcdatamodeld;
+			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 0;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A5AA87632850FAD2008D045B /* Project object */;
 }

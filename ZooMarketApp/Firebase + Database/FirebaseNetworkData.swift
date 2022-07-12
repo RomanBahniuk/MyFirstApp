@@ -14,15 +14,11 @@ import FirebaseFirestore
 
 final class FirebaseNetworkData {
     
-    private let firestore = Firestore.firestore()
-    private let userID = Firebase.Auth.auth().currentUser?.uid
-    
     
     weak var alertDelegate: WrongUserDataAlert?
     
     
-    
-    func createUser(withUserName userName: String, userSecondName: String, userPhoneNumber: String, userDayOfBirth: String, email: String, password: String, userProfileImage: String) {
+    func createUser(withUserName userName: String, userSecondName: String, userPhoneNumber: String, userDayOfBirth: String, email: String, password: String, userImageURL: String) {
         
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
@@ -35,7 +31,7 @@ final class FirebaseNetworkData {
             guard let userID = result?.user.uid else { return }
             
             
-            Firestore.firestore().collection("FirestoreUsers").document("\(userID)").setData(["userEmail": email, "userPhoneNumber": userPhoneNumber,"userName": userName, "userSecondName": userSecondName, "userDayOfBirth": userDayOfBirth, "userID": userID, "userProfileImage": userProfileImage]) {
+            Firestore.firestore().collection("FirestoreUsers").document("\(userID)").setData(["userEmail": email, "userPhoneNumber": userPhoneNumber,"userName": userName, "userSecondName": userSecondName, "userDayOfBirth": userDayOfBirth, "userID": userID, "userImageURL": userImageURL]) {
                 err in
                 if let err = err {
                     print("error!:\(err.localizedDescription)")
@@ -146,4 +142,46 @@ final class FirebaseNetworkData {
     }
     
     
+    
+    
+    //MARK: UserDataOperations
+    
+    
+    func updateUserData(completion: @escaping (Firestore) -> ()) {
+        completion(Firestore.firestore())
+    }
+    
+    
+    func getUserData(completion: @escaping (Firestore) -> ()) {
+        completion(Firestore.firestore())
+    }
+    
+    
+    func getUserPhoto(completion: @escaping (Storage) -> ()) {
+        completion(Storage.storage())
+        
+    }
+
+    func deleteUserPhoto(completion: @escaping (Bool) -> ()) {
+        
+        let userID = Firebase.Auth.auth().currentUser?.uid
+        let storageRef = Storage.storage().reference(withPath: "UserProfilePhoto")
+        let userProfilePhoto = storageRef.child("\(userID!)")
+        
+        userProfilePhoto.delete { error in
+            if let error = error {
+                
+                print("\(error.localizedDescription)")
+                completion(false)
+            
+            } else {
+                completion(true)
+            }
+        }
+        
+    }
+        
+    
+
+
 }

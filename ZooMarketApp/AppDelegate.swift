@@ -8,9 +8,35 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var window: UIWindow?
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        let persistentContainer = NSPersistentContainer(name: "ZooMarketApp")
+        persistentContainer.loadPersistentStores { description, error in
+            if let error = error {
+                fatalError("Unable to load persistent stores: \(error)")
+            }
+        }
+        return persistentContainer
+    }()
+    
+    
+    func saveContext() {
+        let context = persistentContainer.viewContext
+        guard context.hasChanges else { return }
+        do {
+            try context.save()
+        } catch let err as NSError {
+            print("Error!\(err), \(err.userInfo)")
+        }
+    }
+    
+    
 
 
 

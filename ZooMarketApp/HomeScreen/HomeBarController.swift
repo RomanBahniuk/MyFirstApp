@@ -8,9 +8,12 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import CoreData
 
 class HomeBarController: UITabBarController {
     
+    
+    var coreData: NSPersistentContainer!
     
     let firebaseNetworkData: FirebaseNetworkData = .init()
     
@@ -24,6 +27,7 @@ class HomeBarController: UITabBarController {
         setTabBarControllers()
         authenticateUser()
         setTapBar()
+        
         
 
     }
@@ -76,7 +80,6 @@ extension HomeBarController {
     
     
 }
-    
    
     
     

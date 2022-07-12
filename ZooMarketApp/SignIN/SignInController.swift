@@ -66,13 +66,14 @@ extension SignInController: SignInButton {
         
         
         
-        firebaseNetworkData.logInUser(withEmail: email, password: password) { userLoginIn in
+        firebaseNetworkData.logInUser(withEmail: email, password: password) { [weak self] userLoginIn in
             
             if userLoginIn == false {
                 print("Error")
             } else {
-                self.dismiss(animated: true)
-                }
+                self!.dismiss(animated: true)
+                
+            }
         }
         
     }

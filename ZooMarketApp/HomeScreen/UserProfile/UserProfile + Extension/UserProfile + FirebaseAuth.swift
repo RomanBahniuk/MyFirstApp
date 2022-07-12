@@ -10,6 +10,7 @@ import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseFirestore
+import CoreData
 
 
 
@@ -17,19 +18,34 @@ extension UserProfileController {
     
     
     func loadUserData() {
-        
+
         
         let dataBase = Firestore.firestore()
         let userID = Auth.auth().currentUser?.uid
-        
         let storageRef = Storage.storage().reference(withPath: "UserProfilePhoto")
         let userProfilePhoto = storageRef.child("\(userID!)")
         
-        userProfilePhoto.getData(maxSize: 1 * 1024 * 1024) { data, err in
+        
+        dataBase.collection("FirestoreUsers").whereField("userID", isEqualTo: userID!).getDocuments { snap, err in
             if let err = err {
-                print("\(err.localizedDescription)")
+                print(err.localizedDescription)
             } else {
-                self.userHeader.userImage.image = UIImage(data: data!)
+                for i in snap!.documentChanges {
+                    let photoURL = i.document.get("userImageURL") as! String
+                    DispatchQueue.main.async {
+                        if photoURL.isEmpty {
+                            self.userHeader.userImage.image = UIImage(named: "UserProfileImage")
+                        } else {
+                            userProfilePhoto.getData(maxSize: 1 * 1024 * 1024) { data, err in
+                                if let err = err {
+                                    print("\(err.localizedDescription)")
+                                } else {
+                                    self.userHeader.userImage.image = UIImage(data: data!)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         
@@ -54,8 +70,6 @@ extension UserProfileController {
             }
             
         }
-        
-        
         
         
 
